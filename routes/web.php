@@ -20,3 +20,4 @@ Route::get('/result', function () {
 
 Route::post('/home',"LoginController@store")->name('homePage');
 Route::post('/UpdateSecretNumber',"adminController@update")->name('UpdateSecretNumber');
+Route::post('/updatePassworde',"adminController@updatePassworde")->name('updatePassworde');

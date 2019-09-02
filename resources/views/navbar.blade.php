@@ -19,6 +19,11 @@
             float: left;
             margin-top: -20px;
         }
+        .sn2{
+            float: left;
+            margin-top: -20px;
+            margin-left: 130px;
+        }
         .logo{
             margin-top: 10px;
             font-size: 18px;
@@ -37,11 +42,12 @@
             <ul class="nav-items">
                 <li class="logo">مقياس هيرمان</li>
                 <li class="sn" data-toggle="modal" data-target="#myModal"><a>تغيير الرقم السري</a></li>
+                <li class="sn2" data-toggle="modal" data-target="#myModal2"><a> تغيير كلمة المرور</a></li>
+
             </ul>
         </div>
     </nav>
-
-    <!-- Start Modal -->
+    <!-- Start Modal 1 -->
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -50,8 +56,10 @@
             <h4 class="modal-title">تغيير الرقم السري</h4>
           </div>
           <div class="modal-body">
-            <span id="done"></span>
-          
+
+
+            <span id="msg2"></span>
+
             <form id="update-form">
               @csrf
               </br>
@@ -64,7 +72,44 @@
             <button type="button" class="btn btn-default" data-dismiss="modal">إغلاق</button>
           </div>
         </div>
-      <!-- End Modal -->
+      </div>
+    </div>
+      <!-- End Modal 1 -->
+
+
+
+
+
+<!-- Start Modal 2 -->
+      <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">تغيير كلمة مرور الأدمن</h4>
+            </div>
+            <div class="modal-body">
+
+
+              <span id="msg"></span>
+
+              <form id="update-password">
+                @csrf
+                </br>
+                <label for="secretCode">كلمة السر الجديدة: </label>
+                <input type="text" name="secretNumber" id="secretNumber" required>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-default" onclick="updatePassworde()">تعديل</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">إغلاق</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- End Modal 2 -->
+
+
 @show
 
 <script>
@@ -82,8 +127,41 @@ function updateCode(){
                 data: data,
                 dataType:"json",
                 success: function(response) {
-                  document.getElementById("done").innerHTML = response.success;
-                    $('#done').css('color','green');
+                  if(response.success){
+                    document.getElementById("msg2").innerHTML = response.success;
+                      $('#msg2').css('color','green');
+                  }else {
+                    document.getElementById("msg2").innerHTML = response.error;
+                      $('#msg2').css('color','red');
+                  }
+
+                    }
+
+            });
+}
+
+function updatePassworde(){
+  var data = $('#update-password').serializeArray();
+
+  $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                type: "post",
+                url: '{{url('/updatePassworde')}}',
+                data: data,
+                dataType:"json",
+                success: function(response) {
+                  if(response.success){
+                    document.getElementById("msg").innerHTML = response.success;
+                      $('#msg').css('color','green');
+                  }else {
+                    document.getElementById("msg").innerHTML = response.error;
+                      $('#msg').css('color','red');
+                  }
+
                     }
 
             });
