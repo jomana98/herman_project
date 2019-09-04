@@ -41,9 +41,14 @@
         <div class="container-fluid">
             <ul class="nav-items">
                 <li class="logo">مقياس هيرمان</li>
+
+
+
+
+                @if($name=='admin')
                 <li class="sn" data-toggle="modal" data-target="#myModal"><a>تغيير الرقم السري</a></li>
                 <li class="sn2" data-toggle="modal" data-target="#myModal2"><a> تغيير كلمة المرور</a></li>
-
+              @endif
             </ul>
         </div>
     </nav>

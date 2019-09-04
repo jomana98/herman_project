@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use Cookie;
 class LoginController extends Controller
 {
   function store(Request $request){
@@ -13,7 +13,8 @@ class LoginController extends Controller
       $admin = DB::table('users')->select('secretNumber')->where('name','=','admin')->first();
       //عشان أتامد انو اليوزر موجود بالداتا بيز ولا لا
       $u = DB::table('users')->where('name',$request['user-name'])->first();
-
+      $minutes = 2;
+      $cookie = cookie('name', 'value', $minutes);
 
       if(md5($request['password'])==$user->secretNumber&&$request['user-name']!='admin'){
         if(!$u){
@@ -21,14 +22,14 @@ class LoginController extends Controller
           $user->name =$request['user-name'];
           $user->secretNumber =md5($request['password']);
           $user->save();
-          return view('home');
+          return view('home',['name'=>$request['user-name']]);
         }else{
           return redirect()->back();
         }
 
           }
       elseif (md5($request['password'])==$admin->secretNumber&&$request['user-name']=='admin') {
-        return view('home');
+        return view('home',['name'=>$request['user-name']]);
       }
       else {
         return redirect()->back();
