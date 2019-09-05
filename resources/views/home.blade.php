@@ -44,7 +44,9 @@
 
 @section('container')
 <div class="container">
-  
+<form id="form" method="post" action="{{url('/result')}}">
+  @csrf
+  <input type="hidden" value="{{$name}}" name="name">
   <div class="panel panel-default">
   <div class="panel-heading">إستعمال اليد</div>
   <div class="panel-body">
@@ -68,12 +70,13 @@
     <div id="q2" class="q">
       <p class="font-size">6- {{$q2->question}}</p>
       @foreach($ans2 as $ans)
-      <div class="radio1" style="margin-left:60px; margin-top:10px;"><input type="radio" name="q2" value="{{$ans->clasification}}"  class="text-center">{{$ans->choice}}</div>
+      <div class="radio1" style="margin-left:60px; margin-top:10px;"><input type="radio" name="q2" value="{{$ans->clasification}}"  class="text-center">&nbsp;&nbsp;{{$ans->choice}}</div>
       @endforeach
     </div>
 
   </div>
   </div>
+
 
   <div class="panel panel-default">
   <div class="panel-heading">أفضل الموضوعات وأسوأها</div>
@@ -87,7 +90,7 @@
     <div id="q3" class="q">
       <p class="font-size">{{$q3->question}}</p>
       @foreach($ans3 as $ans)
-      <div class="radio1" style="margin-left:60px; margin-top:10px;">{{$x}} <input type="number" name="q3" value="" max=3 min=1  class="text-center">{{$ans->choice}}</div>
+      <div class="radio1" style="margin-left:60px; margin-top:10px;">{{$x}} <input type="number" name="q3{{$ans->id}}" value="" max=3 min=1  class="text-center">{{$ans->choice}}</div>
       <?php $x++ ?>
       @endforeach
     </div>
@@ -112,7 +115,7 @@
 
         <div class="radio1" style="margin-left:150px; margin-top:10px;">
             @foreach($ans as $subans)
-            <div style="margin-bottom:10px">{{$x}}<input type="number" name="q4" value="" max=5 min=1 class="text-center">{{$subans->choice}}</div>
+            <div style="margin-bottom:10px">{{$x}}<input type="number" name="q4{{$x}}" value="" max=5 min=1 class="text-center">{{$subans->choice}}</div>
             <?php $x++ ?>
             @endforeach
         </div>
@@ -141,7 +144,7 @@
 
         <div class="radio1" style="margin-left:150px; margin-top:10px;">
             @foreach($ans as $subans)
-            <div style="margin-bottom:10px">{{$x}}<input type="number" name="q5" value="" max=3 min=2 class="text-center">{{$subans->choice}}</div>
+            <div style="margin-bottom:10px">{{$x}}<input type="number" name="q5{{$x}}" value="" max=3 min=2 class="text-center">{{$subans->choice}}</div>
             <?php $x++ ?>
             @endforeach
         </div>
@@ -151,6 +154,7 @@
 
   </div>
 </div>
+
 <div class="panel panel-default">
   <div class="panel-heading">الهوايات</div>
   <div class="panel-body">
@@ -168,7 +172,7 @@
 
         <div class="radio1" style="margin-left:150px; margin-top:10px;">
             @foreach($ans as $subans)
-            <div style="margin-bottom:10px">{{$x}}<input type="number" name="q6" value="" max=3 min=1 class="text-center">{{$subans->choice}}</div>
+            <div style="margin-bottom:10px">{{$x}}<input type="number" name="q6{{$x}}" value="" max=3 min=1 class="text-center">{{$subans->choice}}</div>
             <?php $x++ ?>
             @endforeach
         </div>
@@ -240,10 +244,10 @@
       <p class="font-size"> {{$q10->question}}</p>
 
     @for($i=76; $i<=99; $i++)
-    <div style="margin-left:60px; margin-top:10px;">{{$i}}
+    <div style="margin-left:60px; margin-top:10px;">{{$i}}-
       @foreach($ans10 as $ans)
       @if($ans->choice_value == $x)
-      <input type="radio" name="q10{{$x}}" value="{{$ans->clasification}}"class="text-center">{{$ans->choice}}
+      &nbsp;&nbsp;<input type="radio" name="q10{{$i}}" value="{{$ans->clasification}}"class="text-center">&nbsp;{{$ans->choice}}&nbsp;&nbsp;&nbsp;
       @endif
       @endforeach
     </div>
@@ -310,11 +314,11 @@
             @foreach($q12 as $q)
             <tr>
               <td>{{$x}}-{{$q->question}}</td>
-              <td><input type="radio" name="q12{{$x}}" value="" style="margin-right:30px;"></td>
-              <td><input type="radio" name="q12{{$x}}" value="" style="margin-right:20px;"></td>
-              <td><input type="radio" name="q12{{$x}}" value="" style="margin-right:25px;"></td>
-              <td><input type="radio" name="q12{{$x}}" value="" style="margin-right:25px;"></td>
-              <td><input type="radio" name="q12{{$x}}" value="" style="margin-right:30px;"></td>
+              <td><input type="radio" name="q12{{$x}}" value="أوافق بشدة" style="margin-right:30px;"></td>
+              <td><input type="radio" name="q12{{$x}}" value="أوافق" style="margin-right:20px;"></td>
+              <td><input type="radio" name="q12{{$x}}" value="وسط" style="margin-right:25px;"></td>
+              <td><input type="radio" name="q12{{$x}}" value="لا أوافق" style="margin-right:25px;"></td>
+              <td><input type="radio" name="q12{{$x}}" value="أوافق بشدة" style="margin-right:30px;"></td>
             </tr>
             <?php $x++; ?>
             @endforeach
@@ -328,6 +332,10 @@
   </div>
 </div>
 
+<button name="send" class="btn btn-primary" type="submit" value="submit">أظهر النتيجة</button>
+</form>
+
+</div>
 @endsection
 
 

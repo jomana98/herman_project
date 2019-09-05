@@ -33,6 +33,14 @@
             border: none;
             margin-bottom: 100px;
         }
+        .modal-header .close{
+          float: left;
+          margin-left: 1px;
+          margin-top: 1px;
+        }
+        a:hover{
+            cursor: pointer;
+        }
 
     </style>
 @endsection
@@ -46,9 +54,10 @@
 
 
                 @if($name=='admin')
-                <li class="sn" data-toggle="modal" data-target="#myModal"><a>تغيير الرقم السري</a></li>
-                <li class="sn2" data-toggle="modal" data-target="#myModal2"><a> تغيير كلمة المرور</a></li>
+                <li class="sn" data-toggle="modal" style="margin-left:200px;" data-target="#myModal"><a>تغيير الرقم السري</a></li>
+                <li class="sn2" style="margin-left:80px;" data-toggle="modal" data-target="#myModal2"><a> تغيير كلمة المرور</a></li>
               @endif
+              <li class="sn"><a href="{{route('logOut')}}">تسجيل خروج</a></li>
             </ul>
         </div>
     </nav>

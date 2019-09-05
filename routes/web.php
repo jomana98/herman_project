@@ -14,10 +14,10 @@
 Route::get('/', function () {
     return view('logIn');
 });
-Route::get('/result', function () {
-    return view('result');
-});
-
+Route::post('/result',"QuestionController@showResult")->name('result');
+Route::get('/logOut', function () {
+    return view('logIn');
+})->name('logOut');
 Route::post('/home',"LoginController@store")->name('homePage');
 Route::post('/UpdateSecretNumber',"adminController@update")->name('UpdateSecretNumber');
 Route::post('/updatePassworde',"adminController@updatePassworde")->name('updatePassworde');

@@ -13,8 +13,7 @@ class LoginController extends Controller
       $admin = DB::table('users')->select('secretNumber')->where('name','=','admin')->first();
       //عشان أتامد انو اليوزر موجود بالداتا بيز ولا لا
       $u = DB::table('users')->where('name',$request['user-name'])->first();
-      $minutes = 2;
-      $cookie = cookie('name', 'value', $minutes);
+
 
       if(md5($request['password'])==$user->secretNumber&&$request['user-name']!='admin'){
         if(!$u){

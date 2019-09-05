@@ -86,8 +86,8 @@
 
 @section('container')
     <div class="container-fluid mainPage">
-        <span>الاسم: </span><span>آية الغرباوي</span><br>
-        <span>تاريخ الاختبار: </span><span>5/8/2019 </span>
+        <span>الاسم: </span><span> {{$name}}</span><br>
+        <span>تاريخ الاختبار: </span><span>{{date('Y/m/d')}} </span>
 
         <div class="result">
             <h1 class="text-center">النتيجة</h1>
@@ -122,7 +122,6 @@
 
         <div class="greeting">
             <span>نشكر لكم حسن تعاونكم معنا </span><br>
-            <span>المدرب : سالم آل خازم القحطاني </span>
         </div>
         <div class="twitter text-center">
             <span>و أرحب بكم على حسابي على تويتر </span><br>
