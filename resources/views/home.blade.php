@@ -33,6 +33,16 @@
       color: red;
       font-weight: 600;
     }
+    .error{
+      color: #ff0000!important;
+      font-size: 14px;
+      padding: 5px;
+      border-radius: 10px;
+      /*width: 15%;*/
+    }
+      input[disabled]{
+        pointer-events: none;
+      }
     </style>
 @endsection
 
@@ -56,10 +66,12 @@
     ?>
     <div id="q1" class="q">
     <p class="font-size">5- {{$q1->question}}</p>
+      <input type="radio" name="q1" style="opacity: 0" disabled='disabled' class="disable"><br>
     @foreach($ans1 as $ans)
 
-    <div class="radio1"><input type="radio" name="q1" value="{{$ans->clasification}}"><img src="{{asset('images/'.$ans->choice.'.PNG')}}"></div>
+    <div class="radio1"><input type="radio" name="q1" value="{{$ans->clasification}}" ><img src="{{asset('images/'.$ans->choice.'.PNG')}}"></div>
     @endforeach
+
     </div>
     <!--..........................................................................................-->
     <?php
@@ -69,7 +81,8 @@
 
     <div id="q2" class="q">
       <p class="font-size">6- {{$q2->question}}</p>
-      @foreach($ans2 as $ans)
+      <input type="radio" name="q2" style="opacity: 0" disabled='disabled' class="disable"><br>
+    @foreach($ans2 as $ans)
       <div class="radio1" style="margin-left:60px; margin-top:10px;"><input type="radio" name="q2" value="{{$ans->clasification}}"  class="text-center">&nbsp;&nbsp;{{$ans->choice}}</div>
       @endforeach
     </div>
@@ -78,7 +91,7 @@
   </div>
 
 
-  <div class="panel panel-default">
+<div class="panel panel-default">
   <div class="panel-heading">أفضل الموضوعات وأسوأها</div>
   <div class="panel-body">
     <!--..........................................................................................-->
@@ -93,12 +106,13 @@
       <div class="radio1" style="margin-left:60px; margin-top:10px;">{{$x}} <input type="number" name="q3{{$ans->id}}" value="" max=3 min=1  class="text-center">{{$ans->choice}}</div>
       <?php $x++ ?>
       @endforeach
+      <div class="errorTxt"></div>
     </div>
     <p class="note">تأكد أنك استعملت كل رقم من الأرقام 1، 2، 3 لمرة واحدة فقط… صحح إن اقتضى الأمر</p>
   </div>
   </div>
 
-  <div class="panel panel-default">
+<div class="panel panel-default">
   <div class="panel-heading">طبيعة العمل</div>
   <div class="panel-body">
     <!--..........................................................................................-->
@@ -126,8 +140,7 @@
   </div>
   </div>
 
-
-  <div class="panel panel-default">
+<div class="panel panel-default">
   <div class="panel-heading">الصفات الأساسية</div>
   <div class="panel-body">
     <!--..........................................................................................-->
@@ -170,7 +183,7 @@
       <p class="font-size">{{$q6->question}}</p>
       @foreach($ans6 as $ans)
 
-        <div class="radio1" style="margin-left:150px; margin-top:10px;">
+        <div class="radio1" style="margin-left:110px; margin-top:10px;">
             @foreach($ans as $subans)
             <div style="margin-bottom:10px">{{$x}}<input type="number" name="q6{{$x}}" value="" max=3 min=1 class="text-center">{{$subans->choice}}</div>
             <?php $x++ ?>
@@ -194,9 +207,11 @@
 
     <div id="q2" class="q">
       <p class="font-size">73- {{$q7->question}}</p>
-      @foreach($ans7 as $ans)
+      <input type="radio" name="q7" style="opacity: 0" disabled='disabled' class="disable"><br>
+    @foreach($ans7 as $ans)
       <div class="radio1" style="margin-left:60px; margin-top:10px;"><input type="radio" name="q7" value="{{$ans->clasification}}"  class="text-center">{{$ans->choice}}</div>
       @endforeach
+      <div class="errorTxt"></div>
     </div>
   </div>
 </div>
@@ -212,9 +227,11 @@
 
     <div id="q2" class="q">
       <p class="font-size">74- {{$q8->question}}</p>
-      @foreach($ans8 as $ans)
-      <div class="radio1" style="margin-left:60px; margin-top:10px;"><input type="radio" name="q8" value="{{$ans->clasification}}"  class="text-center">{{$ans->choice}}</div>
+      <input type="radio" name="q8" style="opacity: 0" disabled='disabled' class="disable"><br>
+    @foreach($ans8 as $ans)
+      <div class="radio1" style="margin-left:60px; margin-top:10px;"><input type="radio" name="q8" value="{{$ans->clasification}}"  class="text-center" >{{$ans->choice}}</div>
       @endforeach
+      <div class="errorTxt"></div>
     </div>
     <!--..........................................................................................-->
     <?php
@@ -224,7 +241,8 @@
 
     <div id="q2" class="q">
       <p class="font-size">75 {{$q9->question}}</p>
-      @foreach($ans9 as $ans)
+      <input type="radio" name="q9" style="opacity: 0" disabled='disabled' class="disable"><br>
+    @foreach($ans9 as $ans)
       <div class="radio1" style="margin-left:60px; margin-top:10px;"><input type="radio" name="q9" value="{{$ans->clasification}}"  class="text-center">{{$ans->choice}}</div>
       @endforeach
     </div>
@@ -244,12 +262,15 @@
       <p class="font-size"> {{$q10->question}}</p>
 
     @for($i=76; $i<=99; $i++)
-    <div style="margin-left:60px; margin-top:10px;">{{$i}}-
-      @foreach($ans10 as $ans)
+    <div style="margin-left:60px; margin-top:10px;">
+      <input type="radio" name="q10{{$i}}" style="opacity: 0" disabled='disabled' class="disable"><br>
+      {{$i}}-
+    @foreach($ans10 as $ans)
       @if($ans->choice_value == $x)
       &nbsp;&nbsp;<input type="radio" name="q10{{$i}}" value="{{$ans->clasification}}"class="text-center">&nbsp;{{$ans->choice}}&nbsp;&nbsp;&nbsp;
       @endif
       @endforeach
+      <div class="errorTxt"></div>
     </div>
       <?php $x++?>
     @endfor
@@ -271,20 +292,23 @@
 
     <div id="q11" class="q">
       <p class="font-size">100 {{$q11->question}}</p>
+      <input type="radio" name="q11" style="opacity: 0" disabled='disabled' class="disable"><br>
 
-      <span style="margin-left:30;">  منبسط للخارج</span>
-    <input type="radio" name="q11" value="A2" class="radio-css" style="margin-left:30;">
-    <input type="radio" name="q11" value="B1" class="radio-css" style="margin-left:30;">
-    <input type="radio" name="q11" value="B2" class="radio-css" style="margin-left:30;">
-    <input type="radio" name="q11" value="B3" class="radio-css" style="margin-left:30;">
-    <input type="radio" name="q11" value="C1" class="radio-css" style="margin-left:30;">
-    <input type="radio" name="q11" value="C2" class="radio-css" style="margin-left:30;">
-    <input type="radio" name="q11" value="D1" class="radio-css" style="margin-left:30;">
-    <input type="radio" name="q11" value="D2" class="radio-css" style="margin-left:30;">
+      <span style="margin-left:30PX;">  منبسط للخارج</span>
+    <input type="radio" name="q11" value="A1" class="radio-css" style="margin-left:30PX;">
+    <input type="radio" name="q11" value="A2" class="radio-css" style="margin-left:30PX;">
+    <input type="radio" name="q11" value="B1" class="radio-css" style="margin-left:30PX;">
+    <input type="radio" name="q11" value="B2" class="radio-css" style="margin-left:30PX;">
+    <input type="radio" name="q11" value="B3" class="radio-css" style="margin-left:30PX;">
+    <input type="radio" name="q11" value="C1" class="radio-css" style="margin-left:30PX;">
+    <input type="radio" name="q11" value="C2" class="radio-css" style="margin-left:30PX;">
+    <input type="radio" name="q11" value="D1" class="radio-css" style="margin-left:30PX;">
+    <input type="radio" name="q11" value="D2" class="radio-css" style="margin-left:30PX;">
     <span>  متجه للداخل</span>
 
 
     </div>
+    <div class="errorTxt"></div>
   </div>
 </div>
 <div class="panel panel-default">
@@ -305,7 +329,7 @@
                 <th ></th>
                 <th class="text-center">أوافق بشدة</th>
                 <th class="text-center">موافق</th>
-                <th class="text-center">وسط</th>
+                <th class="text-center">محايد</th>
                 <th class="text-center">لا أوافق</th>
                 <th class="text-center">لا أوافق بشدة</th>
               </tr>
@@ -314,11 +338,11 @@
             @foreach($q12 as $q)
             <tr>
               <td>{{$x}}-{{$q->question}}</td>
-              <td><input type="radio" name="q12{{$x}}" value="أوافق بشدة" style="margin-right:30px;"></td>
-              <td><input type="radio" name="q12{{$x}}" value="أوافق" style="margin-right:20px;"></td>
-              <td><input type="radio" name="q12{{$x}}" value="وسط" style="margin-right:25px;"></td>
-              <td><input type="radio" name="q12{{$x}}" value="لا أوافق" style="margin-right:25px;"></td>
-              <td><input type="radio" name="q12{{$x}}" value="أوافق بشدة" style="margin-right:30px;"></td>
+              <td><input type="radio" name="q12{{$x}}" value="vg" style="margin-right:30px;"></td>
+              <td><input type="radio" name="q12{{$x}}" value="g" style="margin-right:20px;"></td>
+              <td><input type="radio" name="q12{{$x}}" value="w" style="margin-right:25px;"></td>
+              <td><input type="radio" name="q12{{$x}}" value="ng" style="margin-right:25px;"></td>
+              <td><input type="radio" name="q12{{$x}}" value="vng" style="margin-right:30px;"></td>
             </tr>
             <?php $x++; ?>
             @endforeach
@@ -329,10 +353,10 @@
         </div>
       </div>
 
-  </div>
-</div>
 
-<button name="send" class="btn btn-primary" type="submit" value="submit">أظهر النتيجة</button>
+
+
+<button name="send" class="btn btn-primary" type="submit" value="submit" id="submitButton">أظهر النتيجة</button>
 </form>
 
 </div>
@@ -340,4 +364,87 @@
 
 
 @section('links')
+  @parent
 @endsection
+@section('script')
+<script>
+
+    $('#submitButton').click(function(x){
+
+        x.preventDefault();
+        validateForm();
+    });
+      function validateForm(){
+      var validator = $("#form").validate({
+        rules:{
+              q1: "required",
+              q2: "required",
+              q7: "required",
+              q8: "required",
+              q9: "required",
+              q11: "required",
+              q1076: "required",
+              q1077: "required",
+              q1078: "required",
+              q1079: "required",
+              q1080: "required",
+              q1081: "required",
+              q1082: "required",
+              q1083: "required",
+              q1084: "required",
+              q1085: "required",
+              q1086: "required",
+              q1087: "required",
+              q1088: "required",
+              q1089: "required",
+              q1090: "required",
+              q1091: "required",
+              q1092: "required",
+              q1093: "required",
+              q1094: "required",
+              q1095: "required",
+              q1096: "required",
+              q1097: "required",
+              q1098: "required",
+              q1099: "required",
+              q12101: "required",
+              q12102: "required",
+              q12103: "required",
+              q12104: "required",
+              q12105: "required",
+              q12106: "required",
+              q12107: "required",
+              q12108: "required",
+              q12109: "required",
+              q12110: "required",
+              q12111: "required",
+              q12112: "required",
+              q12113: "required",
+              q12114: "required",
+              q12115: "required",
+              q12116: "required",
+              q12117: "required",
+              q12118: "required",
+              q12119: "required",
+              q12120: "required",
+
+        },
+        {{--errorElement : 'div',--}}
+        {{--errorLabelContainer: '.errorTxt'--}}
+
+
+
+
+});
+
+
+if(!$("#form").valid()){
+  return false;
+}else{
+  $('#form').submit();
+}
+}
+
+</script>
+@endsection
+

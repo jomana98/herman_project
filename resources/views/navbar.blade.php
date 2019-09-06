@@ -3,7 +3,9 @@
 @section('style')
     @parent
     <style>
-
+        .container-fluid {
+            padding-left: 50px;
+        }
         .nav-items li{
             list-style: none;
             color: white;

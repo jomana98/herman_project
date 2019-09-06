@@ -101,18 +101,18 @@
             </div>
             <div class="results">
                 علامات اللقطة<div class="text-center result-content">
-                    <span class="squares" style=" background-color: blue">101</span>
-                    <span class="squares" style=" background-color: green;">11</span>
-                    <span class="squares" style=" background-color: red;">20</span>
-                    <span class="squares" style=" background-color: yellow;">21</span>
+                    <span class="squares" style=" background-color: blue">{{$Dtotal}}</span>
+                    <span class="squares" style=" background-color: green;">{{$Ctotal}}</span>
+                    <span class="squares" style=" background-color: red;">{{$Btotal}}</span>
+                    <span class="squares" style=" background-color: yellow;">{{$Atotal}}</span>
                 </div>
             </div>
             <div class="results">
                 رمز اللقطة<div class="text-center result-content">
-                    <span class="squares" style=" background-color: blue">101</span>
-                    <span class="squares" style=" background-color: green;">11</span>
-                    <span class="squares" style=" background-color: red;">20</span>
-                    <span class="squares" style=" background-color: yellow;">21</span>
+                    <span class="squares" style=" background-color: blue">{{$Drate}}</span>
+                    <span class="squares" style=" background-color: green;">{{$Crate}}</span>
+                    <span class="squares" style=" background-color: red;">{{$Brate}}</span>
+                    <span class="squares" style=" background-color: yellow;">{{$Arate}}</span>
                 </div>
             </div>
 
@@ -134,3 +134,4 @@
 
 @section('links')
 @endsection
+
