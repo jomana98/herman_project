@@ -19,5 +19,6 @@ Route::get('/logOut', function () {
     return view('logIn');
 })->name('logOut');
 Route::post('/home',"LoginController@store")->name('homePage');
+Route::post('/printResult','QuestionController@print');
 Route::post('/UpdateSecretNumber',"adminController@update")->name('UpdateSecretNumber');
 Route::post('/updatePassworde',"adminController@updatePassworde")->name('updatePassworde');

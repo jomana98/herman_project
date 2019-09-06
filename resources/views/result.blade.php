@@ -3,6 +3,12 @@
 @section('style')
     @parent
     <style>
+
+    @media print {
+     nav{
+        display: none;
+    }
+  }
         .mainPage{
             padding: 80px 60px;
         }
@@ -116,7 +122,10 @@
                 </div>
             </div>
 
-            <button>طباعة النتيجة</button>
+          <form method="post" action="{{url('/printResult')}}">
+            @csrf;
+            <button type="submit" name="print" value="print">طباعة النتيجة</button>
+          </form>
         </div>
 
 
