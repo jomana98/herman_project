@@ -65,12 +65,12 @@
         }
         .twitter{
             float: left;
-            margin-top: -40px;
+            margin-top: -20px;
 
         }
         .twitter a{
             display: inline-block;
-            margin-top: 10px;
+            margin-top:22px;
 
         }
         .fa-twitter{
@@ -124,6 +124,8 @@
 
           <form method="post" action="{{url('/printResult')}}">
             @csrf;
+
+            <input type="hidden" value="{{$name}}" name="nameuser">
             <button type="submit" name="print" value="print">طباعة النتيجة</button>
           </form>
         </div>
@@ -134,7 +136,8 @@
         </div>
         <div class="twitter text-center">
             <span>و أرحب بكم على حسابي على تويتر </span><br>
-           <a href=""> <i class="fa fa-twitter text-center" aria-hidden="true"></i></a>
+            <span ></span>
+           <a href="https://twitter.com/salim_alqahtani?lang=de" style="color:black;font-weight:600">salim_alqahtani@ <i class="fa fa-twitter text-center" aria-hidden="true"></i></a>
 
         </div>
     </div>

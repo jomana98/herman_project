@@ -208,11 +208,12 @@ class QuestionController extends Controller
     }
 
 
- public function print()
+ public function print(Request $request)
 {
+
 $setAutoTopMargin = false;
   $mpdf = new \Mpdf\Mpdf();
-  $x=5;
+  $date=date('Y/m/d');
   $mpdf->WriteHTML('
 
 <html>
@@ -221,7 +222,7 @@ $setAutoTopMargin = false;
 
   <style>
       body{
-          font-family: Cairo, sans-serif;
+          font-family:sans-serif;
           direction: rtl;
          }
          h1{
@@ -283,8 +284,8 @@ $setAutoTopMargin = false;
 
 
     <div id="user">
-       <span>الاسم: </span><span> </span><br>
-         <span>تاريخ الاختبار: </span><span>.{{$x}}
+       <span>الاسم: </span><span>'.$request['nameuser'].' </span><br>
+         <span>تاريخ الاختبار: </span>'.$date.'<span>
 
          </span>
     <div>
@@ -321,7 +322,8 @@ $setAutoTopMargin = false;
         <span>نشكر لكم حسن تعاونكم معنا </span><br>
     </div>
     <div class="twitter text-center">
-        <span>و أرحب بكم على حسابي على تويتر </span><br>
+        <span>و أرحب بكم على حسابي على تويتر </span><br>&nbsp;&nbsp;&nbsp;
+        <spsn>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salim_alqahtani@</span>
        <a href=""> <i class="fa fa-twitter text-center" aria-hidden="true"></i></a>
 
     </div>
