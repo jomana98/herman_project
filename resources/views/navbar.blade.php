@@ -37,7 +37,7 @@
         }
         .modal-header .close{
           float: left;
-          margin-left: 1px;
+          margin-left: -40px;
           margin-top: 1px;
         }
         a:hover{

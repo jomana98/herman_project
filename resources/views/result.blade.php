@@ -65,12 +65,12 @@
         }
         .twitter{
             float: left;
-            margin-top: -40px;
+            margin-top: -20px;
 
         }
         .twitter a{
             display: inline-block;
-            margin-top: 10px;
+            margin-top:22px;
 
         }
         .fa-twitter{
@@ -128,6 +128,18 @@
 
           <form method="post" action="{{url('/printResult')}}">
             @csrf;
+
+            <input type="hidden" value="{{$name}}" name="nameuser">
+            <input type="hidden" value="{{$Dtotal}}" name="Dtotal">
+            <input type="hidden" value="{{$Ctotal}}" name="Ctotal">
+            <input type="hidden" value="{{$Atotal}}" name="Atotal">
+            <input type="hidden" value="{{$Btotal}}" name="Btotal">
+            <input type="hidden" value="{{$Brate}}" name="Brate">
+            <input type="hidden" value="{{$Arate}}" name="Arate">
+            <input type="hidden" value="{{$Crate}}" name="Crate">
+            <input type="hidden" value="{{$Drate}}" name="Drate">
+
+
             <button type="submit" name="print" value="print">طباعة النتيجة</button>
           </form>
         </div>
@@ -138,7 +150,8 @@
         </div>
         <div class="twitter text-center">
             <span>و أرحب بكم على حسابي على تويتر </span><br>
-           <a href=""> <i class="fa fa-twitter text-center" aria-hidden="true"></i></a>
+            <span ></span>
+           <a href="https://twitter.com/salim_alqahtani?lang=de" style="color:black;font-weight:600" target="_blank">salim_alqahtani@ <i class="fa fa-twitter text-center" aria-hidden="true"></i></a>
 
         </div>
     </div>
@@ -150,6 +163,7 @@
 @endsection
 @section('script')
 <script>
+        function draw(){
         var c = document.getElementById("canvas");
         var ctx = c.getContext("2d");
         Chart.pluginService.register({
@@ -200,14 +214,15 @@
         var Atotal = $("#Atotal").text();
 
         var data = {
-        labels: ['','D','C', '', 'B' ,'A'],
+        labels: [null,'D','C', null, 'B' ,'A'],
         datasets: [{
 
           label: "النتيجة",
           borderColor: 'rgba(6, 229, 195, 1)',
           pointBackgroundColor: 'rgba(6, 229, 195, 1)',
           data: [null,Atotal,Dtotal,null,Ctotal,Btotal],
-          spanGaps: true
+          spanGaps: true,
+
         }]
         };
 
@@ -219,11 +234,15 @@
 
             },
             ticks: {
+              display:false,
               beginAtZero: true,
               stepSize: 30,
               min: 0,
               max: 120,
-              pointBackgroundColor:'rgba(6, 229, 195, 1)'
+              pointBackgroundColor:'rgba(6, 229, 195, 1)',
+
+
+
             },
         },
         };
@@ -235,7 +254,9 @@
         });
 
 
+}
 
+draw();
 </script>
 
 @endsection
