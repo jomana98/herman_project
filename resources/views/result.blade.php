@@ -3,6 +3,12 @@
 @section('style')
     @parent
     <style>
+
+    @media print {
+     nav{
+        display: none;
+    }
+  }
         .mainPage{
             padding: 80px 60px;
         }
@@ -101,22 +107,29 @@
             </div>
             <div class="results">
                 علامات اللقطة<div class="text-center result-content">
-                    <span class="squares" style=" background-color: blue">{{$Dtotal}}</span>
-                    <span class="squares" style=" background-color: green;">{{$Ctotal}}</span>
-                    <span class="squares" style=" background-color: red;">{{$Btotal}}</span>
-                    <span class="squares" style=" background-color: yellow;">{{$Atotal}}</span>
+                    <span class="squares" id="Dtotal" style=" background-color: yellow">{{$Dtotal}}</span>
+                    <span class="squares" id="Ctotal" style=" background-color: red;">{{$Ctotal}}</span>
+                    <span class="squares" id="Btotal" style=" background-color: green;">{{$Btotal}}</span>
+                    <span class="squares" id="Atotal" style=" background-color: blue;">{{$Atotal}}</span>
                 </div>
             </div>
             <div class="results">
                 رمز اللقطة<div class="text-center result-content">
-                    <span class="squares" style=" background-color: blue">{{$Drate}}</span>
-                    <span class="squares" style=" background-color: green;">{{$Crate}}</span>
-                    <span class="squares" style=" background-color: red;">{{$Brate}}</span>
-                    <span class="squares" style=" background-color: yellow;">{{$Arate}}</span>
+                    <span class="squares" style=" background-color: yellow">{{$Drate}}</span>
+                    <span class="squares" style=" background-color: red;">{{$Crate}}</span>
+                    <span class="squares" style=" background-color: green;">{{$Brate}}</span>
+                    <span class="squares" style=" background-color: blue;">{{$Arate}}</span>
                 </div>
             </div>
 
-            <button>طباعة النتيجة</button>
+            <canvas id="canvas">
+
+            </canvas>
+
+          <form method="post" action="{{url('/printResult')}}">
+            @csrf;
+            <button type="submit" name="print" value="print">طباعة النتيجة</button>
+          </form>
         </div>
 
 
@@ -133,5 +146,96 @@
 
 
 @section('links')
+    @parent
 @endsection
+@section('script')
+<script>
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
+        Chart.pluginService.register({
+            beforeDraw: chart => {
+                const { ctx, scale, config } = chart
+                const { xCenter, yCenter, drawingArea: radius } = scale
 
+         {{--c--}}
+        ctx.beginPath();
+        ctx.arc(xCenter, yCenter, radius, 0*Math.PI, Math.PI * .5 )
+        ctx.lineTo(xCenter, yCenter);
+        ctx.fillStyle = "#fc7676"
+        ctx.fill()
+        ctx.save()
+
+         {{--b--}}
+        ctx.beginPath();
+        ctx.arc(xCenter, yCenter, radius, Math.PI * .5, Math.PI * 1)
+        ctx.lineTo(xCenter, yCenter);
+        ctx.fillStyle = "#008000b8"
+        ctx.fill()
+        ctx.save()
+        {{--d--}}
+        ctx.save()
+        ctx.beginPath();
+        ctx.arc(xCenter, yCenter, radius, Math.PI * 1.5, Math.PI * 2)
+        ctx.lineTo(xCenter, yCenter);
+        ctx.fillStyle = "#fcfd6e"
+        ctx.fill()
+        ctx.save()
+
+        {{--a--}}
+        ctx.beginPath();
+        ctx.arc(xCenter, yCenter, radius, Math.PI * 1, Math.PI * 1.5)
+        ctx.lineTo(xCenter, yCenter);
+        ctx.fillStyle = "#0000ffcc"
+        ctx.fill()
+        ctx.save()
+
+         ctx.restore()
+            }
+        });
+
+
+        var Dtotal = $("#Dtotal").text();
+        var Ctotal = $("#Ctotal").text();
+        var Btotal = $("#Btotal").text();
+        var Atotal = $("#Atotal").text();
+
+        var data = {
+        labels: ['','D','C', '', 'B' ,'A'],
+        datasets: [{
+
+          label: "النتيجة",
+          borderColor: 'rgba(6, 229, 195, 1)',
+          pointBackgroundColor: 'rgba(6, 229, 195, 1)',
+          data: [null,Atotal,Dtotal,null,Ctotal,Btotal],
+          spanGaps: true
+        }]
+        };
+
+        var options = {
+        legend:false,
+        scale: {
+            gridLines: {
+              circular: true,
+
+            },
+            ticks: {
+              beginAtZero: true,
+              stepSize: 30,
+              min: 0,
+              max: 120,
+              pointBackgroundColor:'rgba(6, 229, 195, 1)'
+            },
+        },
+        };
+
+        var radarChart = new Chart(document.getElementById("canvas"), {
+        type: 'radar',
+        data: data,
+        options: options
+        });
+
+
+
+</script>
+
+@endsection
