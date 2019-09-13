@@ -4,13 +4,35 @@
     @parent
     <style>
 
-    @media print {
-     nav{
-        display: none;
-    }
-  }
+        @media print {
+            #tw , button{
+                display: none;
+            }
+            title{
+                display: none;
+            }
+            canvas{
+                margin: 0 -225px 0 50px;
+            }
+            .values{
+                position: absolute;
+                right: 100px;
+
+
+            }
+            .space{
+                margin-top:10px;
+                margin-bottom:10px;
+            }
+            .mainPage{
+                padding-bottom: 0;
+            }
+
+
+
+        }
         .mainPage{
-            padding: 80px 60px;
+            padding: 80px 60px 30px;
         }
         .mainPage span{
             margin-left: 5px;
@@ -54,7 +76,7 @@
             border-radius: 15px;
             padding: 7px;
             width: 100px;
-            margin: 30px 42% 15px;
+            margin: 30px 44% 15px;
             background-color: #2c4861;
             color: white;
             border: 1px;
@@ -80,6 +102,9 @@
         .fa-twitter:hover{
             color:#a1cbef ;
         }
+        .values{
+            margin-right: 50px;
+        }
 
     </style>
 @endsection
@@ -96,9 +121,9 @@
         <span>تاريخ الاختبار: </span><span>{{date('Y/m/d')}} </span>
 
         <div class="result">
-            <h1 class="text-center">النتيجة</h1>
+            <h1 class="text-center" style="margin-bottom:60px;">النتيجة</h1>
             <div class="results">
-                الربع<div class="text-center result-content">
+                <span class="values">الربع</span><div class="text-center result-content">
                     <span>A</span>
                     <span>B</span>
                     <span>C</span>
@@ -106,7 +131,7 @@
                 </div>
             </div>
             <div class="results">
-                علامات اللقطة<div class="text-center result-content">
+                <span class="values space">علامات اللقطة</span><div class="text-center result-content">
                     <span class="squares" id="Dtotal" style=" background-color: yellow">{{$Dtotal}}</span>
                     <span class="squares" id="Ctotal" style=" background-color: red;">{{$Ctotal}}</span>
                     <span class="squares" id="Btotal" style=" background-color: green;">{{$Btotal}}</span>
@@ -114,7 +139,7 @@
                 </div>
             </div>
             <div class="results">
-                رمز اللقطة<div class="text-center result-content">
+                <span class="values">رمز اللقطة</span><div class="text-center result-content">
                     <span class="squares" style=" background-color: yellow">{{$Drate}}</span>
                     <span class="squares" style=" background-color: red;">{{$Crate}}</span>
                     <span class="squares" style=" background-color: green;">{{$Brate}}</span>
@@ -126,22 +151,9 @@
 
             </canvas>
 
-          <form method="post" action="{{url('/printResult')}}">
-            @csrf;
 
-            <input type="hidden" value="{{$name}}" name="nameuser">
-            <input type="hidden" value="{{$Dtotal}}" name="Dtotal">
-            <input type="hidden" value="{{$Ctotal}}" name="Ctotal">
-            <input type="hidden" value="{{$Atotal}}" name="Atotal">
-            <input type="hidden" value="{{$Btotal}}" name="Btotal">
-            <input type="hidden" value="{{$Brate}}" name="Brate">
-            <input type="hidden" value="{{$Arate}}" name="Arate">
-            <input type="hidden" value="{{$Crate}}" name="Crate">
-            <input type="hidden" value="{{$Drate}}" name="Drate">
+            <button type="submit" name="print" value="print" onclick="window.print()">طباعة النتيجة</button>
 
-
-            <button type="submit" name="print" value="print">طباعة النتيجة</button>
-          </form>
         </div>
 
 
@@ -151,7 +163,8 @@
         <div class="twitter text-center">
             <span>و أرحب بكم على حسابي على تويتر </span><br>
             <span ></span>
-           <a href="https://twitter.com/salim_alqahtani?lang=de" style="color:black;font-weight:600" target="_blank">salim_alqahtani@ <i class="fa fa-twitter text-center" aria-hidden="true"></i></a>
+            <span>salim_alqahtani@ </span>
+            <span id="tw"><a href="https://twitter.com/salim_alqahtani?lang=de" style="color:black;font-weight:600" target="_blank"> <i class="fa fa-twitter text-center" aria-hidden="true"></i></a></span>
 
         </div>
     </div>
@@ -162,7 +175,8 @@
     @parent
 @endsection
 @section('script')
-<script>
+    <script>
+
         function draw(){
         var c = document.getElementById("canvas");
         var ctx = c.getContext("2d");
@@ -220,7 +234,7 @@
           label: "النتيجة",
           borderColor: 'rgba(6, 229, 195, 1)',
           pointBackgroundColor: 'rgba(6, 229, 195, 1)',
-          data: [null,Atotal,Dtotal,null,Ctotal,Btotal],
+          data: [null,Dtotal,Ctotal,null,Btotal,Atotal],
           spanGaps: true,
 
         }]
@@ -257,6 +271,9 @@
 }
 
 draw();
+
+
+
 </script>
 
 @endsection

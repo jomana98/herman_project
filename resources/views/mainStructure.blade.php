@@ -30,11 +30,13 @@
 
 @section('links')
 {{--bootstrap--}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>--}}
+<script src="https://cdn.jsdelivr.net/gh/nagix/nagix.github.io@chartjs/Chart.6289.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="{{asset('js/jquery.validate.js')}}"></script>
+{{--<script src="{{asset('js/chart.js')}}"></script>--}}
 @show
 @section('script')
 @show
