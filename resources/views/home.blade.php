@@ -4,8 +4,8 @@
     @parent
     <style>
         .panel-body{
-            padding: 40px;
-        }
+                       padding: 40px;
+                   }
         .container{
             padding-top: 100px;
         }
@@ -253,7 +253,29 @@
 
                 </div>
             </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">مستوى الدافعية</div>
 
+                <div class="panel-body">
+                    <!--..........................................................................................-->
+                    <?php
+                    $q7 = DB::table('questions')->where('type','radio3')->first();
+                    $ans8 = DB::table('answers')->where('question_id',$q7->id)->get();
+                    ?>
+
+                    <div id="q2" class="q">
+                        <p class="font-size">73- {{$q7->question}}</p>
+
+                        <input type="radio" name="q7" style="opacity: 0" disabled='disabled' class="disable"><br>
+                        @foreach($ans8 as $ans)
+                            <div class="radio1" style="margin-left:60px; margin-top:10px;"><input type="radio" name="q7" value="{{$ans->clasification}}"  class="text-center">&nbsp;&nbsp;&nbsp;{{$ans->choice}}</div>
+                        @endforeach
+
+                    </div>
+                    <!--..........................................................................................-->
+
+                </div>
+            </div>
             <div class="panel panel-default">
                 <div class="panel-heading">التقيؤ بسبب الحركة</div>
 
@@ -416,7 +438,7 @@
 @endsection
 @section('script')
     <script>
-    {{--المواضيع الدراسية --}}var counter_1 =0;
+    var counter_1 =0;
     var counter_2 =0;
     var counter_3 =0;
     $('.test').on('focusin', 'input', function(){
@@ -466,7 +488,7 @@
     }
 
 });
-{{-- نهاية المواضيع الدراسية --}}
+ {{--نهاية المواضيع الدراسية --}}
     {{--بداية فحص طبيعة العمل--}}
     var counter1 = 0;
     var counter2 = 0;

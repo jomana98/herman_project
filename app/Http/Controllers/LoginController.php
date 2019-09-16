@@ -21,14 +21,14 @@ class LoginController extends Controller
           $user->name =$request['user-name'];
           $user->secretNumber =md5($request['password']);
           $user->save();
-          return view('home',['name'=>$request['user-name']]);
+          return view('shortQuestion',['name'=>$request['user-name']]);
         }else{
           return redirect()->back();
         }
 
           }
       elseif (md5($request['password'])==$admin->secretNumber&&$request['user-name']=='admin') {
-        return view('home',['name'=>$request['user-name']]);
+        return view('shortQuestion',['name'=>$request['user-name']]);
       }
       else {
         return redirect()->back();

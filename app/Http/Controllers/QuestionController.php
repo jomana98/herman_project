@@ -156,6 +156,8 @@ class QuestionController extends Controller
               $Btotal+=$B6;
               $Ctotal+=$C6;
               $Dtotal+=$D6;
+
+
           //seven Question............................................................
             $A7 = 0;$B7 = 0;$C7 = 0;$D7 = 0;
 
@@ -171,7 +173,6 @@ class QuestionController extends Controller
                 $Btotal+=$B7;
                 $Ctotal+=$C7;
                 $Dtotal+=$D7;
-
            //eight Question............................................................
           $A8 = 0;$B8 = 0;$C8 = 0;$D8 = 0;
 
@@ -191,7 +192,6 @@ class QuestionController extends Controller
               $Ctotal+=$C8;
               $Dtotal+=$D8;
 
-
       //nine Question............................................................
           $A9 = 0;$B9 = 0;$C9 = 0;$D9 = 0;
 
@@ -203,6 +203,9 @@ class QuestionController extends Controller
         }
         $Atotal+=$A9;
         $Dtotal+=$D9;
+
+
+
     //ten Question............................................................
           $A10 = 0;$B10 = 0;$C10 = 0;$D10 = 0;
 
@@ -351,6 +354,8 @@ class QuestionController extends Controller
           $Btotal+=$B10;
           $Ctotal+=$C10;
           $Dtotal+=$D10;
+
+
       //11 Question............................................................
       $A11 = 0;$B11 = 0;$C11 = 0;$D11 = 0;
 
@@ -381,244 +386,244 @@ class QuestionController extends Controller
       //12 Question............................................................
       $A12 = 0;$B12 = 0;$C12 = 0;$D12 = 0;
       if($request['q12101'] == 'vg'){
-          $A12+=2;
+          $A12+=5;
       }elseif ($request['q12101'] == 'g') {
-          $A12+=1;
+          $A12+=4;
       }elseif ($request['q12101'] == 'w') {
-          $A12+=0;
+          $A12+=3;
       }elseif ($request['q12101'] == 'ng') {
-          $A12+=1;
-      }elseif ($request['q12101'] == 'vng') {
           $A12+=2;
+      }elseif ($request['q12101'] == 'vng') {
+          $A12+=1;
       }
 
       if($request['q12102'] == 'vg'){
-          $C12+=2;
+          $C12+=5;
       }elseif ($request['q12102'] == 'g') {
-          $C12+=1;
+          $C12+=4;
       }elseif ($request['q12102'] == 'w') {
-          $C12+=0;
+          $C12+=3;
       }elseif ($request['q12102'] == 'ng') {
-          $C12+=1;
-      }elseif ($request['q12102'] == 'vng') {
           $C12+=2;
+      }elseif ($request['q12102'] == 'vng') {
+          $C12+=1;
       }
 
       if($request['q12103'] == 'vg'){
-          $C12+=2;
+          $C12+=5;
       }elseif ($request['q12103'] == 'g') {
-          $C12+=1;
+          $C12+=4;
       }elseif ($request['q12103'] == 'w') {
-          $C12+=0;
+          $C12+=3;
       }elseif ($request['q12103'] == 'ng') {
-          $C12+=1;
-      }elseif ($request['q12103'] == 'vng') {
           $C12+=2;
+      }elseif ($request['q12103'] == 'vng') {
+          $C12+=1;
       }
 
       if($request['q12104'] == 'vg'){
-          $A12+=2;
+          $A12+=5;
       }elseif ($request['q12104'] == 'g') {
-          $A12+=1;
+          $A12+=4;
       }elseif ($request['q12104'] == 'w') {
-          $A12+=0;
+          $A12+=3;
       }elseif ($request['q12104'] == 'ng') {
-          $A12+=1;
-      }elseif ($request['q12104'] == 'vng') {
           $A12+=2;
+      }elseif ($request['q12104'] == 'vng') {
+          $A12+=1;
       }
 
       if($request['q12105'] == 'vg'){
-          $B12+=2;
+          $B12+=5;
       }elseif ($request['q12105'] == 'g') {
-          $B12+=1;
+          $B12+=4;
       }elseif ($request['q12105'] == 'w') {
-          $B12+=0;
+          $B12+=3;
       }elseif ($request['q12105'] == 'ng') {
-          $B12+=1;
-      }elseif ($request['q12105'] == 'vng') {
           $B12+=2;
+      }elseif ($request['q12105'] == 'vng') {
+          $B12+=1;
       }
 
       if($request['q12106'] == 'vg'){
-          $D12+=2;
+          $D12+=5;
       }elseif ($request['q12106'] == 'g') {
-          $D12+=1;
+          $D12+=4;
       }elseif ($request['q12106'] == 'w') {
-          $D12+=0;
+          $D12+=3;
       }elseif ($request['q12106'] == 'ng') {
-          $D12+=1;
-      }elseif ($request['q12106'] == 'vng') {
           $D12+=2;
+      }elseif ($request['q12106'] == 'vng') {
+          $D12+=1;
       }
 
       if($request['q12107'] == 'vg'){
-          $D12+=2;
+          $D12+=5;
       }elseif ($request['q12107'] == 'g') {
-          $D12+=1;
+          $D12+=4;
       }elseif ($request['q12107'] == 'w') {
-          $D12+=0;
+          $D12+=3;
       }elseif ($request['q12107'] == 'ng') {
-          $D12+=1;
-      }elseif ($request['q12107'] == 'vng') {
           $D12+=2;
+      }elseif ($request['q12107'] == 'vng') {
+          $D12+=1;
       }
 
       if($request['q12108'] == 'vg'){
-          $C12+=2;
+          $C12+=5;
       }elseif ($request['q12108'] == 'g') {
-          $C12+=1;
+          $C12+=4;
       }elseif ($request['q12108'] == 'w') {
-          $C12+=0;
+          $C12+=3;
       }elseif ($request['q12108'] == 'ng') {
-          $C12+=1;
-      }elseif ($request['q12108'] == 'vng') {
           $C12+=2;
+      }elseif ($request['q12108'] == 'vng') {
+          $C12+=1;
       }
 
       if($request['q12109'] == 'vg'){
-          $B12+=2;
+          $B12+=5;
       }elseif ($request['q12109'] == 'g') {
-          $B12+=1;
+          $B12+=4;
       }elseif ($request['q12109'] == 'w') {
-          $B12+=0;
+          $B12+=3;
       }elseif ($request['q12109'] == 'ng') {
-          $B12+=1;
-      }elseif ($request['q12109'] == 'vng') {
           $B12+=2;
+      }elseif ($request['q12109'] == 'vng') {
+          $B12+=1;
       }
 
 
       if($request['q12110'] == 'vg'){
-          $D12+=2;
+          $D12+=5;
       }elseif ($request['q12110'] == 'g') {
-          $D12+=1;
+          $D12+=4;
       }elseif ($request['q12110'] == 'w') {
-          $D12+=0;
+          $D12+=3;
       }elseif ($request['q12110'] == 'ng') {
-          $D12+=1;
-      }elseif ($request['q12110'] == 'vng') {
           $D12+=2;
+      }elseif ($request['q12110'] == 'vng') {
+          $D12+=1;
       }
 
       if($request['q12111'] == 'vg'){
-          $A12+=2;
+          $A12+=5;
       }elseif ($request['q12111'] == 'g') {
-          $A12+=1;
+          $A12+=4;
       }elseif ($request['q12111'] == 'w') {
-          $A12+=0;
+          $A12+=3;
       }elseif ($request['q12111'] == 'ng') {
-          $A12+=1;
-      }elseif ($request['q12111'] == 'vng') {
           $A12+=2;
+      }elseif ($request['q12111'] == 'vng') {
+          $A12+=1;
       }
 
       if($request['q12112'] == 'vg'){
-          $C12+=2;
+          $C12+=5;
       }elseif ($request['q12112'] == 'g') {
-          $C12+=1;
+          $C12+=4;
       }elseif ($request['q12112'] == 'w') {
-          $C12+=0;
+          $C12+=3;
       }elseif ($request['q12112'] == 'ng') {
-          $C12+=1;
-      }elseif ($request['q12112'] == 'vng') {
           $C12+=2;
+      }elseif ($request['q12112'] == 'vng') {
+          $C12+=1;
       }
 
       if($request['q12113'] == 'vg'){
-          $B12+=2;
+          $B12+=5;
       }elseif ($request['q12113'] == 'g') {
-          $B12+=1;
+          $B12+=4;
       }elseif ($request['q12113'] == 'w') {
-          $B12+=0;
+          $B12+=3;
       }elseif ($request['q12113'] == 'ng') {
-          $B12+=1;
-      }elseif ($request['q12113'] == 'vng') {
           $B12+=2;
+      }elseif ($request['q12113'] == 'vng') {
+          $B12+=1;
       }
 
       if($request['q12114'] == 'vg'){
-          $D12+=2;
+          $D12+=5;
       }elseif ($request['q12114'] == 'g') {
-          $D12+=1;
+          $D12+=4;
       }elseif ($request['q12114'] == 'w') {
-          $D12+=0;
+          $D12+=3;
       }elseif ($request['q12114'] == 'ng') {
-          $D12+=1;
-      }elseif ($request['q12114'] == 'vng') {
           $D12+=2;
+      }elseif ($request['q12114'] == 'vng') {
+          $D12+=1;
       }
 
       if($request['q12115'] == 'vg'){
-          $A12+=2;
+          $A12+=5;
       }elseif ($request['q12115'] == 'g') {
-          $A12+=1;
+          $A12+=4;
       }elseif ($request['q12115'] == 'w') {
-          $A12+=0;
+          $A12+=3;
       }elseif ($request['q12115'] == 'ng') {
-          $A12+=1;
-      }elseif ($request['q12115'] == 'vng') {
           $A12+=2;
+      }elseif ($request['q12115'] == 'vng') {
+          $A12+=1;
       }
 
       if($request['q12116'] == 'vg'){
-          $B12+=2;
+          $B12+=5;
       }elseif ($request['q12116'] == 'g') {
-          $B12+=1;
+          $B12+=4;
       }elseif ($request['q12116'] == 'w') {
-          $B12+=0;
+          $B12+=3;
       }elseif ($request['q12116'] == 'ng') {
-          $B12+=1;
-      }elseif ($request['q12116'] == 'vng') {
           $B12+=2;
+      }elseif ($request['q12116'] == 'vng') {
+          $B12+=1;
       }
 
       if($request['q12117'] == 'vg'){
-          $B12+=2;
+          $B12+=5;
       }elseif ($request['q12117'] == 'g') {
-          $B12+=1;
+          $B12+=4;
       }elseif ($request['q12117'] == 'w') {
-          $B12+=0;
+          $B12+=3;
       }elseif ($request['q12117'] == 'ng') {
-          $B12+=1;
-      }elseif ($request['q12117'] == 'vng') {
           $B12+=2;
+      }elseif ($request['q12117'] == 'vng') {
+          $B12+=1;
       }
 
       if($request['q12118'] == 'vg'){
-          $D12+=2;
+          $D12+=5;
       }elseif ($request['q12118'] == 'g') {
-          $D12+=1;
+          $D12+=4;
       }elseif ($request['q12118'] == 'w') {
-          $D12+=0;
+          $D12+=3;
       }elseif ($request['q12118'] == 'ng') {
-          $D12+=1;
-      }elseif ($request['q12118'] == 'vng') {
           $D12+=2;
+      }elseif ($request['q12118'] == 'vng') {
+          $D12+=1;
       }
 
       if($request['q12119'] == 'vg'){
-          $C12+=2;
+          $C12+=5;
       }elseif ($request['q12119'] == 'g') {
-          $C12+=1;
+          $C12+=4;
       }elseif ($request['q12119'] == 'w') {
-          $C12+=0;
+          $C12+=3;
       }elseif ($request['q12119'] == 'ng') {
-          $C12+=1;
-      }elseif ($request['q12119'] == 'vng') {
           $C12+=2;
+      }elseif ($request['q12119'] == 'vng') {
+          $C12+=1;
       }
 
       if($request['q12120'] == 'vg'){
-          $A12+=2;
+          $A12+=5;
       }elseif ($request['q12120'] == 'g') {
-          $A12+=1;
+          $A12+=4;
       }elseif ($request['q12120'] == 'w') {
-          $A12+=0;
+          $A12+=3;
       }elseif ($request['q12120'] == 'ng') {
-          $A12+=1;
-      }elseif ($request['q12120'] == 'vng') {
           $A12+=2;
+      }elseif ($request['q12120'] == 'vng') {
+          $A12+=1;
       }
 
       $Atotal+=$A12;

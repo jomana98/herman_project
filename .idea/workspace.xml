@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6aa1ccd2-8950-4567-9e9b-92c99aad0179" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/shortQuestion.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mainStructure.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mainStructure.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/result.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/result.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,29 +19,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/mainStructure.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="33" column="84" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/result.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="238" selection-start-line="238" selection-end-line="238" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/home.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/shortQuestion.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="623" column="31" lean-forward="true" selection-start-line="623" selection-start-column="31" selection-end-line="623" selection-end-column="31" />
+            <state relative-caret-position="396">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5610">
+              <caret line="255" column="7" selection-start-line="255" selection-start-column="7" selection-end-line="277" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -64,6 +64,8 @@
       <find>null</find>
       <find>spanGaps</find>
       <find>nan</find>
+      <find>q7</find>
+      <find>q10</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,7 +78,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/resources/views/mainLayout.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/logIn.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" />
         <option value="$USER_HOME$/Desktop/pdf.html" />
         <option value="$PROJECT_DIR$/../farmacy/public/js/jquery.validate.js" />
         <option value="$PROJECT_DIR$/public/js/jquery.validate.js" />
@@ -87,14 +88,16 @@
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/web.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/home.blade.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/result.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" />
         <option value="$PROJECT_DIR$/public/js/chart.js" />
         <option value="$USER_HOME$/Desktop/radar.html" />
         <option value="$PROJECT_DIR$/resources/views/mainStructure.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/result.blade.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/mainStructure.blade.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/QuestionController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/shortQuestion.blade.php" />
       </list>
     </option>
   </component>
@@ -189,9 +192,9 @@
       <path value="$PROJECT_DIR$/vendor/mpdf/mpdf" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="255" />
-    <option name="y" value="26" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="245" />
+    <option name="y" value="73" />
     <option name="width" value="1089" />
     <option name="height" value="744" />
   </component>
@@ -201,7 +204,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,6 +249,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,6 +303,10 @@
       <workItem from="1568300881214" duration="1210000" />
       <workItem from="1568324944296" duration="2885000" />
       <workItem from="1568372818620" duration="1315000" />
+      <workItem from="1568529685224" duration="6545000" />
+      <workItem from="1568543609968" duration="2138000" />
+      <workItem from="1568620718192" duration="3120000" />
+      <workItem from="1568656208278" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="result page">
       <created>1567273740512</created>
@@ -312,7 +319,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190152000" />
+    <option name="totallyTimeSpent" value="202554000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -324,9 +331,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="255" y="26" width="1089" height="744" extended-state="0" />
+    <frame x="245" y="73" width="1089" height="744" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25221676" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27881774" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -339,7 +347,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.06495727" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.87920487" visible="true" weight="0.06495727" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.87920487" weight="0.41709402" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.12079511" side_tool="true" weight="0.47350428" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.53846157" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -462,16 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#39#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -505,22 +503,8 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/ResetPasswordController.php" />
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/web.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/result.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="649" selection-start-line="649" selection-end-line="649" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/chart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -535,45 +519,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/mainStructure.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="33" column="84" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/mainStructure.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/mainStructure.blade.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/QuestionController.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/home.blade.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/QuestionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="664" selection-start-line="664" selection-end-line="664" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/QuestionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="700" column="9" lean-forward="true" selection-start-line="700" selection-start-column="9" selection-end-line="700" selection-end-column="9" />
+        <state relative-caret-position="482">
+          <caret line="669" selection-start-line="669" selection-end-line="669" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/result.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="482">
           <caret line="238" selection-start-line="238" selection-end-line="238" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/home.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="623" column="31" lean-forward="true" selection-start-line="623" selection-start-column="31" selection-end-line="623" selection-end-column="31" />
+        <state relative-caret-position="292">
+          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+          <folding>
+            <element signature="e#39#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/mainStructure.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="33" column="84" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/shortQuestion.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5610">
+          <caret line="255" column="7" selection-start-line="255" selection-start-column="7" selection-end-line="277" selection-end-column="18" />
         </state>
       </provider>
     </entry>
