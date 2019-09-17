@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6aa1ccd2-8950-4567-9e9b-92c99aad0179" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/selection.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/selection.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shortQuestion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shortQuestion.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,6 +138,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../pharmacy" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
@@ -197,7 +193,7 @@
       <workItem from="1568656208278" duration="599000" />
       <workItem from="1568666401179" duration="554000" />
       <workItem from="1568702147581" duration="15751000" />
-      <workItem from="1568741538930" duration="4674000" />
+      <workItem from="1568741538930" duration="12294000" />
     </task>
     <task id="LOCAL-00001" summary="result page">
       <created>1567273740512</created>
