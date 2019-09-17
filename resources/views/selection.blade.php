@@ -1,5 +1,5 @@
 @extends('navbar')
-@section('title' , ' الأسئلة المختصرة')
+@section('title' , ' بوابة الأختيارات')
 @section('style')
     @parent
     <style>
@@ -26,12 +26,22 @@
 
     <div class="container text-center" style="padding-top: 100px">
         <div class="herman">
-            <a href="{{route('homePage')}}"></a>
+
+
+            <form method="get" action="{{route('home')}}">
+                <input type="hidden" value="{{$name}}" name="name">
+                <input type="submit" value="submit">
+            </form>
+
         </div>
 
 
         <div class="herman">
-            <a href="{{route('homePage')}}"></a>
+            <form method="get" action="{{route('shortQuestionView')}}">
+                <input type="hidden" value="{{$name}}" name="name">
+                <input type="submit" value="submit">
+            </form>
+
         </div>
     </div>
 

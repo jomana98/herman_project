@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
+
   function store(Request $request){
 
       $user = DB::table('users')->select('secretNumber')->where('name','!=','admin')->first();
@@ -21,17 +22,18 @@ class LoginController extends Controller
           $user->name =$request['user-name'];
           $user->secretNumber =md5($request['password']);
           $user->save();
-          return view('shortQuestion',['name'=>$request['user-name']]);
+          return view('selection',['name'=>$request['user-name']]);
         }else{
           return redirect()->back();
         }
 
           }
       elseif (md5($request['password'])==$admin->secretNumber&&$request['user-name']=='admin') {
-        return view('shortQuestion',['name'=>$request['user-name']]);
+        return view('selection',['name'=>$request['user-name']]);
       }
       else {
         return redirect()->back();
       }
 }
+
 }

@@ -1,3 +1,4 @@
+
 @extends('navbar')
 @section('title' , 'الأسئلة')
 @section('style')
