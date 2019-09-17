@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// reference the Dompdf namespace
-use Dompdf\Dompdf;
+use Illuminate\Support\Facades\DB;
+use App\ShortQuestion;
 class QuestionController extends Controller
 {
   public function showResult(Request $request){
@@ -683,137 +683,60 @@ return view('result' , ['name'=>$request['name'],
 
     }
 
+    public function homeView(Request $request){
+        return view('home',['name'=>$request['name']]);
+    }
+
+    public function shortQuestionView(Request $request){
+      $Questions=DB::table('short_questions')->get();
+      return view('shortQuestion',['name'=>$request['name'],'questions'=>$Questions]);
+    }
+
+    public function shortQuestionResult(Request $request){
 
 
+        $classification = ShortQuestion::all();
 
+        foreach($classification as $qu ){
+            echo $qu;
+        }
+        $index=1;
+        $A = 0;
+        $B = 0;
+        $C = 0;
+        $D = 0;
+       $collection = collect($request);
+        foreach ($collection as $user=>$v) {
+            echo $user->short1;
+        }
 
-// public function print(Request $request)
-//{
+//        foreach( $x as $key=>$item){
+//            echo $x->short1;
+//        }
+//        dd($x);
+//        $classification = ShortQuestion::select('classification')->where('id',$index)->first();
 //
-//$setAutoTopMargin = false;
-//  $mpdf = new \Mpdf\Mpdf();
-//  $date=date('Y/m/d');
-//  $mpdf->WriteHTML('
+//      foreach ($x as $key=>$value){
+//          if($classification['classification']=='A'){
+//              if($key['short'.$index]==1)
+//                    $A++;
+//                    $index++;
 //
-//<html>
-//<head>
-//<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 //
-//  <style>
-//      body{
-//          font-family:sans-serif;
-//          direction: rtl;
-//         }
-//         h1{
-//           text-align:center;
-//           margin-bottom:50px;
-//         }
-//
-//         table {
-//          border-collapse: collapse;
-//          width: 100%;
 //          }
-//
-//        td, th {
-//          border: 1px solid ;
-//          text-align:center;
-//          padding: 8px;
-//        }
-//
-//        #user{
-//          margin-top:20px;
-//        }
-//        #result{
-//          background-color:#F8F8F8;
-//          margin-top:50px;
-//          height:300px;
-//        }
-//        td{
-//          color:white;
-//          font-weight:500;
-//        }
-//
-//        .greeting{
-//            margin-top: 50px;
-//        }
-//        .twitter{
-//            margin-right:480px;
-//            margin-top: -20px;
-//
-//
-//        }
-//        .twitter a{
-//            display: inline-block;
-//            margin-top: 10px;
-//
-//        }
-//        .fa-twitter{
-//            font-size: 24px;
-//            color: #3880a2;
-//        }
-//        .fa-twitter:hover{
-//            color:#a1cbef ;
-//        }
-//
-//  </style>
-//</head>
-//  <body>
-//
-//
-//    <div id="user">
-//       <span>الاسم: </span><span>'.$request['nameuser'].' </span><br>
-//         <span>تاريخ الاختبار: </span>'.$date.'<span>
-//
-//         </span>
-//    <div>
-//    <div id="result">
-//    <h1 class="text-center">النتيجة</h1>
-//    <table border="1" style="width:80%;margin:auto;">
-//      <tr>
-//        <th>الرُبع</th>
-//        <th>D</th>
-//        <th>C</th>
-//        <th>B</th>
-//        <th>A</th>
-//      </tr>
-//
-//      <tr>
-//        <th>علامة اللقطة</th>
-//        <td style="background-color:#b7a12e;">'.$request['Dtotal'].'</td>
-//        <td style="background-color:red;">'.$request['Ctotal'].'</td>
-//        <td style="background-color:green;">'.$request['Btotal'].'</td>
-//        <td style="background-color:blue;">'.$request['Atotal'].'</td>
-//      </tr>
-//
-//      <tr>
-//        <th>رمز اللقطة</th>
-//        <td style="background-color:#b7a12e;">'.$request['Drate'].'</td>
-//        <td style="background-color:red;">'.$request['Crate'].'</td>
-//        <td style="background-color:green;">'.$request['Brate'].'</td>
-//        <td style="background-color:blue;">'.$request['Arate'].'</td>
-//      </tr>
-//    </table>
-//    </div>
-//
-//    <div class="greeting">
-//        <span>نشكر لكم حسن تعاونكم معنا </span><br>
-//    </div>
-//    <div class="twitter text-center">
-//        <span>و أرحب بكم على حسابي على تويتر </span><br>&nbsp;&nbsp;&nbsp;
-//        <spsn>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salim_alqahtani@</span>
-//       <a href=""> <i class="fa fa-twitter text-center" aria-hidden="true"></i></a>
-//
-//    </div>
-//  </body>
-//
-//</html>
-//  ');
-//
-//  $mpdf->Output();
-//
-//  $mpdf->stream();
-//}
-//
+
+      }
+
+
+
+
+
+
+
+//    }
+
+
+
 
 
 

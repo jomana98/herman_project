@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6aa1ccd2-8950-4567-9e9b-92c99aad0179" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/selection.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/selection.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shortQuestion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shortQuestion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+>>>>>>> 9d76bb9dee0d67c2810f0172473a45686c73c4ce
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,6 +21,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+<<<<<<< HEAD
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
@@ -85,6 +95,11 @@
         </entry>
       </file>
     </leaf>
+=======
+    <execution>
+      <executable />
+    </execution>
+>>>>>>> 9d76bb9dee0d67c2810f0172473a45686c73c4ce
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -108,36 +123,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/mainLayout.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/logIn.blade.php" />
-        <option value="$USER_HOME$/Desktop/pdf.html" />
-        <option value="$PROJECT_DIR$/../farmacy/public/js/jquery.validate.js" />
-        <option value="$PROJECT_DIR$/public/js/jquery.validate.js" />
-        <option value="$PROJECT_DIR$/resources/views/navbar.blade.php" />
-        <option value="$USER_HOME$/Downloads/Chart.html" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/web.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/home.blade.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/result.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/chart.js" />
-        <option value="$USER_HOME$/Desktop/radar.html" />
-        <option value="$PROJECT_DIR$/resources/views/mainStructure.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/result.blade.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/mainStructure.blade.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/QuestionController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" />
-        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/shortQuestion.blade.php" />
-      </list>
-    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -230,6 +215,7 @@
       <path value="$PROJECT_DIR$/vendor/mpdf/mpdf" />
     </include_path>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="245" />
     <option name="y" value="73" />
@@ -290,10 +276,16 @@
       </pane>
     </panes>
   </component>
+=======
+  <component name="ProjectId" id="1Qw0Y2zGUl2CM89O80OFJ1EZJ31" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> 9d76bb9dee0d67c2810f0172473a45686c73c4ce
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pharmacy" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -345,7 +337,13 @@
       <workItem from="1568543609968" duration="2138000" />
       <workItem from="1568620718192" duration="3120000" />
       <workItem from="1568656208278" duration="599000" />
+<<<<<<< HEAD
       <workItem from="1568746425632" duration="514000" />
+=======
+      <workItem from="1568666401179" duration="554000" />
+      <workItem from="1568702147581" duration="15751000" />
+      <workItem from="1568741538930" duration="4674000" />
+>>>>>>> 9d76bb9dee0d67c2810f0172473a45686c73c4ce
     </task>
     <task id="LOCAL-00001" summary="result page">
       <created>1567273740512</created>
@@ -357,9 +355,12 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="203068000" />
   </component>
+=======
+>>>>>>> 9d76bb9dee0d67c2810f0172473a45686c73c4ce
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -369,6 +370,7 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
+<<<<<<< HEAD
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
@@ -416,12 +418,30 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout-to-restore>
+=======
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+>>>>>>> 9d76bb9dee0d67c2810f0172473a45686c73c4ce
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="log in page" />
     <MESSAGE value="result page" />
     <option name="LAST_COMMIT_MESSAGE" value="result page" />
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../farmacy/app/Providers/AppServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -622,4 +642,6 @@
       </provider>
     </entry>
   </component>
+=======
+>>>>>>> 9d76bb9dee0d67c2810f0172473a45686c73c4ce
 </project>
