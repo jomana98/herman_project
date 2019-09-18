@@ -700,7 +700,7 @@ return view('result' , ['name'=>$request['name'],
         $D = 0;
         $collect = collect($request);
         $array = $collect->toArray();
-        for ($index = 1; $index < 10; $index++) {
+        for ($index = 1; $index < 57; $index++) {
             $classification = ShortQuestion::select('classification')->where('id', $index)->first();
 
             if ($array['short' . $index] == 1) {
@@ -715,47 +715,48 @@ return view('result' , ['name'=>$request['name'],
                 }
             }
 
-            $APoint = 0;
-            if ($A <= 4) {
-                $APoint = 3;
-            } elseif ($A <= 8) {
-                $APoint = 2;
-            } elseif ($A <= 14) {
-                $APoint = 1;
-            }
-
-
-            $BPoint = 0;
-            if ($B <= 4) {
-                $BPoint = 3;
-            } elseif ($B <= 8) {
-                $BPoint = 2;
-            } elseif ($B <= 14) {
-                $BPoint = 1;
-            }
-
-
-            $CPoint = 0;
-            if ($C <= 4) {
-                $CPoint = 3;
-            } elseif ($C <= 8) {
-                $CPoint = 2;
-            } elseif ($C <= 14) {
-                $CPoint = 1;
-            }
-
-            $DPoint = 0;
-            if ($D <= 4) {
-                $DPoint = 3;
-            } elseif ($D <= 8) {
-                $DPoint = 2;
-            } elseif ($D <= 14) {
-                $DPoint = 1;
-            }
-            return view('shortResult', ['A' => $A, 'B' => $B, 'C' => $C, 'D' => $D,
-                'APoint' => $APoint, 'BPoint' => $BPoint, 'CPoint' => $CPoint, 'DPoint' => $DPoint,]);
-
-
         }
+
+        $APoint = 0;
+        if ($A <= 4) {
+            $APoint = 3;
+        } elseif ($A <= 8) {
+            $APoint = 2;
+        } elseif ($A <= 14) {
+            $APoint = 1;
+        }
+
+
+        $BPoint = 0;
+        if ($B <= 4) {
+            $BPoint = 3;
+        } elseif ($B <= 8) {
+            $BPoint = 2;
+        } elseif ($B <= 14) {
+            $BPoint = 1;
+        }
+
+
+        $CPoint = 0;
+        if ($C <= 4) {
+            $CPoint = 3;
+        } elseif ($C <= 8) {
+            $CPoint = 2;
+        } elseif ($C <= 14) {
+            $CPoint = 1;
+        }
+
+        $DPoint = 0;
+        if ($D <= 4) {
+            $DPoint = 3;
+        } elseif ($D <= 8) {
+            $DPoint = 2;
+        } elseif ($D <= 14) {
+            $DPoint = 1;
+        }
+        return view('shortResult', ['name'=>$request['name'],'A' => $A, 'B' => $B, 'C' => $C, 'D' => $D,
+            'APoint' => $APoint, 'BPoint' => $BPoint, 'CPoint' => $CPoint, 'DPoint' => $DPoint,]);
+
+
     }}
 

@@ -68,6 +68,7 @@
             display: inline-block;
             width: 50px;
             padding-top: 8px;
+            border-radius: 5px;
             height: 40px;
             margin-left: 10px!important;
             margin-right: 10px!important;

@@ -51,6 +51,7 @@
     <div class="container" style="padding-top: 100px">
         <form method="post" action="{{route('shortResult')}}" id="form">
             @csrf
+            <input type="hidden" name="name" value="{{$name}}">
         <div class="panel panel-default"  style="width:80%; margin: auto">
             <div class="panel-heading" style="font-weight: bolder">نموذج هيرمان المختصر</div>
 

@@ -598,7 +598,7 @@
                 $("input[type=submit]").attr('disabled','disabled');
 
                 $(".basic_attr").css('background-color' , "red");
-                $(".basic_attr").text("لا يمكن استخدام الرقم 1 أكثر من مرة");
+                $(".basic_attr").text("لا يمكن استخدام الرقم 3 أكثر من مرة");
             }else{
 
                  $("input[type=submit]").removeAttr('disabled');
