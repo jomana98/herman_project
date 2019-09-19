@@ -753,7 +753,7 @@ return view('result' , ['name'=>$request['name'],
             'APoint'=>$APoint,'BPoint'=>$BPoint,'CPoint'=>$CPoint,'DPoint'=>$DPoint,]);
 
 
-            
+
 
 
     }

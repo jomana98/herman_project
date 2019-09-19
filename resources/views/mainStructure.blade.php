@@ -26,6 +26,7 @@
 
 
 @section('container')
+
 @show
 
 @section('links')
@@ -36,9 +37,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="{{asset('js/jquery.validate.js')}}"></script>
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/0.3.0/tippy.js"></script>--}}
+
+
+
 {{--<script src="{{asset('js/chart.js')}}"></script>--}}
 @show
 @section('script')
+
 @show
 </body>
 </html>
