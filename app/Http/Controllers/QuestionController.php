@@ -705,6 +705,8 @@ class QuestionController extends Controller
         }
 
         //--------------------------------------------------------------------------------
+
+        //................................................................................
         return view('result', ['name' => $request['name'],
             'Atotal' => $Atotal,
             'Btotal' => $Btotal,
