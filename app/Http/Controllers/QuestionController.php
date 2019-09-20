@@ -753,6 +753,10 @@ class QuestionController extends Controller
 
         return view('mainQuestionResult',['name'=>$request['name']]);
     }
+    public function shortResultShow(Request $request){
+
+        return view('shortQuestionResult',['name'=>$request['name']]);
+    }
     public function SelectionpPage(Request $request){
 
         return view('selection',['name'=>$request['name']]);
@@ -821,6 +825,21 @@ class QuestionController extends Controller
         } elseif ($D <= 14) {
             $DPoint = 1;
         }
+
+        $result = new Result();
+        $result->userName=$request['name'];
+        $result->examDate=date('Y/m/d');
+        $result->Atotal = $A;
+        $result->Btotal = $B;
+        $result->Ctotal = $C;
+        $result->Dtotal = $D;
+        $result->Arate = $APoint;
+        $result->Brate = $BPoint;
+        $result->Crate = $CPoint;
+        $result->Drate = $DPoint;
+        $result->resultType= 'short';
+        $result->save();
+
         return view('shortResult', ['name' => $request['name'], 'A' => $A, 'B' => $B, 'C' => $C, 'D' => $D,
             'APoint' => $APoint, 'BPoint' => $BPoint, 'CPoint' => $CPoint, 'DPoint' => $DPoint,]);
 

@@ -18,11 +18,10 @@ Route::post('/result',"QuestionController@showResult")->name('result');
 Route::get('/logOut', function () {
     return view('logIn');
 })->name('logOut');
-Route::get('/shortQuestionResultShow', function () {
-    return view('shortQuestionResult');
-})->name('shortQuestionResultShow');
+
 
 Route::get('/mainQuestionResultShow',"QuestionController@mainQuestionResultShow" )->name('mainQuestionResultShow');
+Route::get('/shortResultShow',"QuestionController@shortResultShow" )->name('shortResultShow');
 
 Route::get('/home',"QuestionController@homeView" )->name('home');
 Route::get('/resultSelection',"QuestionController@resultSelection" )->name('resultSelection');

@@ -74,7 +74,7 @@
         <div class="herman">
             <header><img src="{{asset('images/illustration.jpg')}}"></header>
             <h4> مقياس هيرمان المختصر</h4>
-            <form method="get" action="{{route('shortQuestionResultShow')}}">
+            <form method="get" action="{{route('shortResultShow')}}">
                 <input type="hidden" value="{{$name}}" name="name">
                 <input type="submit" value="عرض النتائج">
             </form>
