@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Result;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\ShortQuestion;
@@ -705,7 +706,18 @@ class QuestionController extends Controller
         }
 
         //--------------------------------------------------------------------------------
-
+        $result = new Result();
+        $result->userName=$request['name'];
+        $result->examDate=date('Y/m/d');
+        $result->Atotal = $Atotal;
+        $result->Btotal = $Btotal;
+        $result->Ctotal = $Ctotal;
+        $result->Dtotal = $Dtotal;
+        $result->Arate = $Arate;
+        $result->Brate = $Brate;
+        $result->Crate = $Crate;
+        $result->Drate = $Drate;
+        $result->save();
         //................................................................................
         return view('result', ['name' => $request['name'],
             'Atotal' => $Atotal,
@@ -733,8 +745,13 @@ class QuestionController extends Controller
     }
 
     public function resultSelection(Request $request){
-        $Questions=DB::table('short_questions')->get();
-        return view('resultSelection',['name'=>$request['name'],'questions'=>$Questions]);
+    $Questions=DB::table('short_questions')->get();
+    return view('resultSelection',['name'=>$request['name'],'questions'=>$Questions]);
+    }
+
+    public function mainQuestionResultShow(Request $request){
+
+        return view('mainQuestionResult',['name'=>$request['name']]);
     }
 
     public function shortQuestionResult(Request $request)

@@ -21,9 +21,8 @@ Route::get('/logOut', function () {
 Route::get('/shortQuestionResultShow', function () {
     return view('shortQuestionResult');
 })->name('shortQuestionResultShow');
-Route::get('/mainQuestionResultShow', function () {
-    return view('mainQuestionResult');
-})->name('mainQuestionResultShow');
+
+Route::get('/mainQuestionResultShow',"QuestionController@mainQuestionResultShow" )->name('mainQuestionResultShow');
 
 Route::get('/home',"QuestionController@homeView" )->name('home');
 Route::get('/resultSelection',"QuestionController@resultSelection" )->name('resultSelection');
