@@ -603,6 +603,7 @@
         $('.test2').on('focusin', 'input', function(){
 
             $(this).data('val', $(this).val());
+
         }).on('change','input', function(){
             var prev = $(this).data('val');
             var current = $(this).val();
@@ -616,6 +617,7 @@
 
                         alert('هذا الرقم غير مسموح به');
                     }
+
                }
 
             if(prev == 2){
@@ -642,7 +644,11 @@
                  $(".basic_attr").text("");
             }
 
+<<<<<<< HEAD
            var inputs = [];
+=======
+            var inputs = [];
+>>>>>>> 28713ef6b25654cb0f6b74ba51efb7509878c69d
             var i;
             var x;
             for(i = 26; i<51; i++){
@@ -658,9 +664,15 @@
             }else{
                 for(x of inputs){
                     $("input[name="+x+"]").removeAttr('disabled');
+<<<<<<< HEAD
 
                 }
 
+=======
+
+                }
+
+>>>>>>> 28713ef6b25654cb0f6b74ba51efb7509878c69d
             }
 
         });
@@ -726,7 +738,19 @@
                 $(".hobby").css('background' , "none");
                 $(".hobby").text("");
            }
+           var inputs = [];
+           var i;
+           var x;
+           for(i = 51; i<73; i++){
+               inputs.push('q6'+i);
+           }
+           if(count1+count2+count3 == 6){
+               for(x of inputs){
+                   if(!$("input[name="+x+"]").val()){
+                       $("input[name="+x+"]").attr('disabled','disabled');
+                   }
 
+<<<<<<< HEAD
          var inputs = [];
             var i;
             var x;
@@ -746,6 +770,14 @@
                         }
             }
 
+=======
+               }
+           }else{
+               for(x of inputs){
+                   $("input[name="+x+"]").removeAttr('disabled');
+               }
+           }
+>>>>>>> 28713ef6b25654cb0f6b74ba51efb7509878c69d
 
 
        });

@@ -705,6 +705,8 @@ class QuestionController extends Controller
         }
 
         //--------------------------------------------------------------------------------
+
+        //................................................................................
         return view('result', ['name' => $request['name'],
             'Atotal' => $Atotal,
             'Btotal' => $Btotal,
@@ -729,6 +731,16 @@ class QuestionController extends Controller
         $Questions = DB::table('short_questions')->get();
         return view('shortQuestion', ['name' => $request['name'], 'questions' => $Questions]);
     }
+
+    public function resultSelection(Request $request){
+        $Questions=DB::table('short_questions')->get();
+        return view('resultSelection',['name'=>$request['name'],'questions'=>$Questions]);
+    }
+    public function SelectionpPage(Request $request){
+
+        return view('selection',['name'=>$request['name']]);
+    }
+
 
     public function shortQuestionResult(Request $request)
     {
