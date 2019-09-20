@@ -717,6 +717,7 @@ class QuestionController extends Controller
         $result->Brate = $Brate;
         $result->Crate = $Crate;
         $result->Drate = $Drate;
+        $result->resultType = "main";
         $result->save();
         //................................................................................
         return view('result', ['name' => $request['name'],
