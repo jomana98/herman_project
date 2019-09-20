@@ -82,6 +82,18 @@
             padding: 5px;
             color: #e9ecef;
         }
+
+        .tooltip-inner{
+            color: white;
+            background-color:#2c4861;
+            padding: 5px;
+            font-size:15px;
+
+        }
+
+        .tooltip.right .tooltip-arrow {
+            border-right: 5px solid #2c4861;}
+
     </style>
 @endsection
 
@@ -198,7 +210,8 @@
 
                             <div class="radio1" style="margin-left:100px; margin-top:10px; background-color:#FEFEBE; padding:20px;">
                                 @foreach($ans as $subans)
-                                    <div style="margin-bottom:10px">{{$x}}<input type="number" name="q4{{$x}}" value="" max=5 min=1 class="text-center" style="background-color:#FEFEBE" >{{$subans->choice}}</div>
+                                    <div style="margin-bottom:10px" >{{$x}}<input type="number" name="q4{{$x}}" value="" max=5 min=1 class="text-center" style="background-color:#FEFEBE" ><span id="t2" title="{{$subans->def}}" data-toggle="tooltip" data-placement="right">{{$subans->choice}}</span></div>
+
                                     <?php $x++ ?>
                                 @endforeach
                             </div>
@@ -229,7 +242,7 @@
 
                             <div class="radio1" style="margin-left:100px; margin-top:10px;background-color:#FEFEBE; padding:20px;">
                                 @foreach($ans as $subans)
-                                    <div style="margin-bottom:10px">{{$x}}<input type="number" name="q5{{$x}}" value="" max=3 min=2 class="text-center" style="background-color:#FEFEBE;">{{$subans->choice}}</div>
+                                    <div style="margin-bottom:10px">{{$x}}<input type="number" name="q5{{$x}}" value="" max=3 min=2 class="text-center" style="background-color:#FEFEBE;"><span id="t2" title="{{$subans->def}}" data-toggle="tooltip" data-placement="right">{{$subans->choice}}</span></div>
                                     <?php $x++ ?>
                                 @endforeach
                             </div>
@@ -355,7 +368,7 @@
                                         @foreach($ans10 as $ans)
                                             @if($ans->choice_value == $x)
                                                 <td style="width:30%">
-                                                    <input type="radio" name="q10{{$i}}" value="{{$ans->clasification}}"class="text-center">&nbsp;&nbsp;{{$ans->choice}}
+                                                    <input type="radio" name="q10{{$i}}" value="{{$ans->clasification}}"class="text-center">&nbsp;&nbsp;<span id="t2" title="{{$ans->def}}" data-toggle="tooltip" data-placement="right">{{$ans->choice}}</span>
                                                 </td>
                                             @endif
                                         @endforeach
@@ -449,6 +462,7 @@
         </form>
 
     </div>
+
 @endsection
 
 
@@ -456,7 +470,12 @@
     @parent
 @endsection
 @section('script')
+
     <script>
+
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     var counter_1 =0;
     var counter_2 =0;
     var counter_3 =0;

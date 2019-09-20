@@ -9,6 +9,9 @@
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/resources/views/mainStructure.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mainStructure.blade.php" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/resources/views/selection.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/selection.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/shortQuestion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shortQuestion.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -16,6 +19,7 @@
 =======
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
 >>>>>>> b5d92e6dae572c2a25026fe94d247e47fa243cc2
+>>>>>>> 0a7e539fc7d9de1bb3aabc90167d1e7316a8e2a9
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -348,11 +352,21 @@
       <workItem from="1568666401179" duration="554000" />
       <workItem from="1568702147581" duration="15751000" />
 <<<<<<< HEAD
+      <workItem from="1568741538930" duration="12437000" />
+      <workItem from="1568820535683" duration="3015000" />
+      <workItem from="1568835914032" duration="596000" />
+      <workItem from="1568838441931" duration="3247000" />
+      <workItem from="1568843212378" duration="4505000" />
+      <workItem from="1568907506393" duration="4728000" />
+      <workItem from="1568930034057" duration="950000" />
+=======
+<<<<<<< HEAD
       <workItem from="1568741538930" duration="4674000" />
 >>>>>>> 9d76bb9dee0d67c2810f0172473a45686c73c4ce
 =======
       <workItem from="1568741538930" duration="12294000" />
 >>>>>>> b5d92e6dae572c2a25026fe94d247e47fa243cc2
+>>>>>>> 0a7e539fc7d9de1bb3aabc90167d1e7316a8e2a9
     </task>
     <task id="LOCAL-00001" summary="result page">
       <created>1567273740512</created>
