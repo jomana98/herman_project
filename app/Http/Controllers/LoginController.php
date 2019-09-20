@@ -23,7 +23,9 @@ class LoginController extends Controller
           $user->secretNumber =md5($request['password']);
           $user->save();
           return view('selection',['name'=>$request['user-name']]);
-        }else{
+        }
+
+        else{
           return redirect()->back();
         }
 

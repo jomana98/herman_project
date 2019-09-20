@@ -1,4 +1,19 @@
+@php
+    use App\User;
+    $userPermision = User::select('permission')->where('name',$name)->where('name','<>' , 'admin')->first();
+    if($userPermision !== null){
+        if($userPermision['permission'] == 0){
+             header("Location: " . URL::to('/'), true, 302);
+        exit();
+    }else{
+        $user = User::where('name',$name)->first();
+        $user->permission = 0;
+        $user->save();
 
+    }
+    }
+
+@endphp
 @extends('navbar')
 @section('title' , 'الأسئلة')
 @section('style')
@@ -42,9 +57,12 @@
             /*border-radius: 10px;*/
             /*width: 15%;*/
         }
-        input[disabled]{
+        input[type='radio'][disabled]{
             pointer-events: none;
         }
+        /*input[type='number'][disabled]{*/
+            /*pointer: cursor ;*/
+        /*}*/
 
         .panel-heading{
             font-weight:900;
@@ -588,6 +606,26 @@
 
         }).on('change','input', function(){
 
+            var inputs = [];
+            var i;
+            var x;
+            for(i = 26; i<51; i++){
+                inputs.push('q5'+i);
+            }
+            if(ctr3+ctr2 == 7){
+                for(x of inputs){
+                    if(!$("input[name="+x+"]").val()){
+                        $("input[name="+x+"]").attr('disabled','disabled');
+                    }
+
+                }
+            }else{
+                for(x of inputs){
+                    $("input[name="+x+"]").removeAttr('disabled');
+
+                }
+
+            }
             var prev = $(this).data('val');
             var current = $(this).val();
 
@@ -661,8 +699,30 @@
 
        $('.test3').on('focusin', 'input', function(){
 
+
+
            $(this).data('val', $(this).val());
        }).on('change','input', function(){
+
+            var inputs = [];
+            var i;
+            var x;
+            for(i = 51; i<73; i++){
+                inputs.push('q6'+i);
+            }
+            if(count1+count2+count3 == 5){
+                for(x of inputs){
+                    if(!$("input[name="+x+"]").val()){
+                        $("input[name="+x+"]").attr('disabled','disabled');
+                    }
+
+                }
+            }else{
+                for(x of inputs){
+                        $("input[name="+x+"]").removeAttr('disabled');
+                        }
+            }
+
 
            var prev = $(this).data('val');
            var current = $(this).val();
