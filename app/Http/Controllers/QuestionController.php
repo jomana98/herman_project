@@ -758,5 +758,9 @@ return view('result' , ['name'=>$request['name'],
             'APoint' => $APoint, 'BPoint' => $BPoint, 'CPoint' => $CPoint, 'DPoint' => $DPoint,]);
 
 
-    }}
+    }
+//    public function goToSelection(){
+//      return view('selection');
+//    }
+}
 

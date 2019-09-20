@@ -1,4 +1,4 @@
-{{$A}}
+
 @extends('navbar')
 @section('title' , 'النتيجة')
 @section('style')
@@ -9,11 +9,15 @@
             #tw , button{
                 display: none;
             }
+            body{
+                margin: 0;
+            }
             title{
                 display: none;
             }
             canvas{
-                margin: 0 -225px -10px 50px;
+                margin: 0 -115px -10px 50px;
+
             }
             .values{
                 position: absolute;
@@ -33,13 +37,14 @@
                 border:1px solid;
             }
             .left{
-                /*position: relative;*/
-                margin-right:-300%!important;
-                margin-top: -70px;
+
+                margin-top: -10px;
+                /*margin-right: -100px;*/
+
             }
             .right{
-                margin-top: -70px;
-                margin-right: -130px;
+                margin-top: -10px;
+                margin-right: -60px;
             }
             .top{
                 margin-top: -70px;
@@ -47,7 +52,7 @@
 
             }
             .bottom{
-                margin-top: -70px;
+                margin-top: 45px;
                 margin-right: -30px;
             }
 
@@ -137,7 +142,7 @@
             position: absolute;
         }
         .left{
-            left: 29%;
+            left: 30%;
             top: 660px;
         }
         .right{
@@ -151,6 +156,85 @@
         .bottom{
             right: 48.5%;
             top: 890px;
+
+        }
+        @media(max-width:1440px) {
+            button{
+                margin: 30px 44% 15px;
+            }
+            .top{
+                right: 48.5%;
+                top: 420px;
+            }
+            .bottom{
+                right: 48.5%;
+                top: 870px;
+
+            }
+            .left{
+                left: 28%;
+                top: 640px;
+            }
+            .right{
+                right: 28%;
+                top: 640px;
+            }
+
+        }
+        @media(max-width:1024px) {
+            .result{
+                width: 90%;
+                margin-top: 20px;
+            }
+            .right , .left , .top , .bottom{
+
+                padding: 5px 10px;
+
+            }
+            .top{
+                right: 48%;
+                top: 450px;
+            }
+            .bottom{
+                right: 48%;
+                top: 860px;
+
+            }
+            .left{
+                left: 28%;
+                top: 657px;
+            }
+            .right{
+                right: 28%;
+                top: 657px;
+            }
+
+        }
+        @media(max-width:768px) {
+            .result{
+                width: 100%;
+
+            }
+            .right , .left , .top , .bottom{
+                font-size: 12px;
+            }
+            .top{
+                right: 48%;
+                top: 460px;
+            }
+            .bottom{
+                right: 48%;
+                top: 770px;
+
+            }
+            .left{
+                left: 26%;
+                top: 615px;
+            }
+            .right{
+                right: 26%;
+                top: 615px;
+            }
 
         }
 

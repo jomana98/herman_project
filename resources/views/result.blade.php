@@ -12,7 +12,7 @@
                 display: none;
             }
             canvas{
-                margin: 0 -225px 0 50px;
+                margin: 0 -90px 0 50px;
             }
             .values{
                 position: absolute;
@@ -105,6 +105,23 @@
         }
         .values{
             margin-right: 50px;
+        }
+        @media(max-width:1024px) {
+            .result{
+                width: 90%;
+                margin-top: 20px;
+            }
+
+        }
+        @media(max-width:768px) {
+            .result{
+                width: 100%;
+                margin-top: 20px;
+            }
+            button{
+                margin: 30px 41% 15px;
+            }
+
         }
 
     </style>

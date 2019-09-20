@@ -1,3 +1,19 @@
+@php
+    use App\User;
+    $userPermision = User::select('permission')->where('name',$name)->where('name','<>' , 'admin')->first();
+    if($userPermision !== null){
+        if($userPermision['permission'] == 0){
+             header("Location: " . URL::to('/'), true, 302);
+        exit();
+    }else{
+        $user = User::where('name',$name)->first();
+        $user->permission = 0;
+        $user->save();
+
+    }
+    }
+
+@endphp
 @extends('navbar')
 @section('title' , ' الاختبار المختصر ')
 @section('style')
