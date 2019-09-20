@@ -56,8 +56,9 @@
 
 
                 @if($name=='admin')
-                <li class="sn" data-toggle="modal" style="margin-left:200px;" data-target="#myModal"><a>تغيير الرقم السري</a></li>
-                <li class="sn2" style="margin-left:80px;" data-toggle="modal" data-target="#myModal2"><a> تغيير كلمة المرور</a></li>
+                <li class="sn" data-toggle="modal" style="margin-left:320px;" data-target="#myModal"><a>تغيير الرقم السري</a></li>
+                <li class="sn2" style="margin-left:200px;" data-toggle="modal" data-target="#myModal2"><a> تغيير كلمة المرور</a></li>
+                <li class="sn2" style="margin-left:100px;"><a href="{{route('resultSelection',['name'=>'admin'])}}"> نتائج الإختبارات</a></li>
               @endif
               <li class="sn"><a href="{{route('logOut')}}">تسجيل خروج</a></li>
             </ul>

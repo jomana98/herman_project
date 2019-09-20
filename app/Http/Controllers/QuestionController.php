@@ -692,6 +692,11 @@ return view('result' , ['name'=>$request['name'],
       return view('shortQuestion',['name'=>$request['name'],'questions'=>$Questions]);
     }
 
+    public function resultSelection(Request $request){
+        $Questions=DB::table('short_questions')->get();
+        return view('resultSelection',['name'=>$request['name'],'questions'=>$Questions]);
+    }
+
     public function shortQuestionResult(Request $request)
     {
         $A = 0;

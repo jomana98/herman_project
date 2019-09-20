@@ -18,7 +18,15 @@ Route::post('/result',"QuestionController@showResult")->name('result');
 Route::get('/logOut', function () {
     return view('logIn');
 })->name('logOut');
+Route::get('/shortQuestionResultShow', function () {
+    return view('shortQuestionResult');
+})->name('shortQuestionResultShow');
+Route::get('/mainQuestionResultShow', function () {
+    return view('mainQuestionResult');
+})->name('mainQuestionResultShow');
+
 Route::get('/home',"QuestionController@homeView" )->name('home');
+Route::get('/resultSelection',"QuestionController@resultSelection" )->name('resultSelection');
 Route::get('/shortQuestion',"QuestionController@shortQuestionView" )->name('shortQuestionView');
 Route::post('/home',"LoginController@store")->name('homePage');
 Route::post('/shortResult',"QuestionController@shortQuestionResult")->name('shortResult');
