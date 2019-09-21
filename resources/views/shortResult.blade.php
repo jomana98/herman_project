@@ -92,7 +92,7 @@
             margin-right: 30px;
         }
         .squares{
-            color: white;
+            color: black;
             display: inline-block;
             width: 50px;
             border-radius: 5px;
@@ -138,7 +138,7 @@
             background-color:#2c4861 ;
             padding: 10px 15px;
             border-radius: 5px;
-            color: white;
+            color: black;
             position: absolute;
         }
         .left{
