@@ -22,15 +22,16 @@
 
     @section('style')
         <style>
-            body{
-                font-family: 'Cairo', sans-serif;
-            }
+
            .dataTables_length{
                visibility: hidden;
            }
             div.dataTables_filter{
                 margin-inside: 50px;
             }
+           body , h1 , h2, h3, h4, h5 , input , button{
+               font-family: 'Cairo', sans-serif!important;
+           }
         </style>
     @show
 </head>

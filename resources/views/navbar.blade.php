@@ -3,6 +3,10 @@
 @section('style')
     @parent
     <style>
+        .dash{
+            border: none!important;
+            border-bottom: 1px dashed!important;
+        }
         .container-fluid {
             padding-left: 50px;
         }
@@ -37,7 +41,7 @@
         }
         .modal-header .close{
           float: left;
-          margin-left: -40px;
+          margin-left: 5px;
           margin-top: 1px;
         }
         a:hover{
@@ -49,7 +53,7 @@
 @section('navbar')
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
-            <ul class="nav-items">
+            <ul class="nav-items" style="margin-top: 15px;">
                 <li class="logo"><a href="{{route('SelectionpPage',['name'=>$name])}}">مقياس هيرمان</a></li>
 
 
@@ -81,7 +85,7 @@
               @csrf
               </br>
               <label for="secretCode">أدخل الرقم الجديد: </label>
-              <input type="text" name="secretNumber" id="secretNumber" required>
+              <input type="text" name="secretNumber" id="secretNumber" required class="dash">
             </form>
           </div>
           <div class="modal-footer">
@@ -114,7 +118,7 @@
                 @csrf
                 </br>
                 <label for="secretCode">كلمة السر الجديدة: </label>
-                <input type="text" name="secretNumber" id="secretNumber" required>
+                <input type="text" name="secretNumber" id="secretNumber" required class="dash">
               </form>
             </div>
             <div class="modal-footer">

@@ -106,6 +106,13 @@
         .values{
             margin-right: 50px;
         }
+
+        .modal-header .close{
+            margin-left: -40px!important;
+        }
+        .modal-footer{
+            padding-top: 0;
+        }
         @media(max-width:1024px) {
             .result{
                 width: 90%;

@@ -644,11 +644,11 @@
                  $(".basic_attr").text("");
             }
 
-<<<<<<< HEAD
+
            var inputs = [];
-=======
+
             var inputs = [];
->>>>>>> 28713ef6b25654cb0f6b74ba51efb7509878c69d
+
             var i;
             var x;
             for(i = 26; i<51; i++){
@@ -664,15 +664,15 @@
             }else{
                 for(x of inputs){
                     $("input[name="+x+"]").removeAttr('disabled');
-<<<<<<< HEAD
+
 
                 }
 
-=======
 
-                }
 
->>>>>>> 28713ef6b25654cb0f6b74ba51efb7509878c69d
+
+
+
             }
 
         });
@@ -750,7 +750,6 @@
                        $("input[name="+x+"]").attr('disabled','disabled');
                    }
 
-<<<<<<< HEAD
          var inputs = [];
             var i;
             var x;
@@ -770,14 +769,14 @@
                         }
             }
 
-=======
+
                }
            }else{
                for(x of inputs){
                    $("input[name="+x+"]").removeAttr('disabled');
                }
            }
->>>>>>> 28713ef6b25654cb0f6b74ba51efb7509878c69d
+
 
 
        });

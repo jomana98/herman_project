@@ -6,6 +6,18 @@
         .container{
             margin-top: 100px;
         }
+        div.dataTables_filter{
+            margin-bottom:20px!important;
+        }
+        input[type=search]{
+            padding: 3px;
+            border: solid gray;
+            margin-right: 5px;
+            border-radius: 7px;
+        }
+        .dataTables_info{
+            visibility: hidden;
+        }
     </style>
 
 @endsection
@@ -31,7 +43,7 @@
             <thead>
             <tr>
                 <th>إسم المتدرب</th>
-                <th>تاريخ الإحتبار</th>
+                <th>تاريخ الإختبار</th>
                 <th>مجموع A</th>
                 <th>مجموع B</th>
                 <th>مجموع C</th>
@@ -72,8 +84,16 @@
 @section('script')
 
     <script>
-    $(document).ready(function() {
-        $('#example').DataTable();
+     $(document).ready(function() {
+        $('#example').DataTable( {
+            scrollY:        '400px',
+            scrollCollapse: true,
+            paging:         false,
+            "oLanguage": {
+            "sSearch": "البحث : "}
+        } );
+
+
     } );
 </script>
 @endsection
