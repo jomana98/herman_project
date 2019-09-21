@@ -170,7 +170,7 @@
             }
             .top{
                 right: 48.5%;
-                top: 420px;
+                top: 400px;
             }
             .bottom{
                 right: 48.5%;
