@@ -3,6 +3,9 @@
 @section('style')
     @parent
     <style>
+        .container{
+            padding-top: 60px!important;
+        }
         .herman{
             border: 1px dashed;
             margin: 70px 20px;
@@ -48,10 +51,19 @@
         .herman-danger{
             width: 60%;
             display: block;
+            padding: 50px;
+            height: 200px;
+            background-color: #2c4861;
+            color: white;
         }
-        .fa-arrow-circle-down{
+
+        .herman-danger span ,  .herman-danger h4{
+
+            color: white!important;
+        }
+        .fa-arrow-down{
             color:#2c4861;
-            font-size: 24px;
+            font-size: 60px;
         }
     </style>
 @endsection
@@ -94,11 +106,11 @@
                 </form>
 
             </div>
-            <div class="text-center"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div>
+            <div class="text-center"><span style="color: red;font-weight: bold">انتبه قبل البدء</span><br><a href="#danger"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></div>
 
         </div>
-        <div class="herman herman-danger">
-            <header class="alert-danger"></header>
+        <div class="herman herman-danger" id="danger">
+
             <h4> تنبيهات عامة</h4>
             <span>1- أول اختيار يرد إلى ذهنك بعد قراءة العبارة هو الذي يعبر عنك بالغالب </span><br>
             <span style="display: block;"> 2- أجب عما هو موجود فيك الآن و ليس ما تسعى لتحقيقه</span>

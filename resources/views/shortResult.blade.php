@@ -16,12 +16,21 @@
                 display: none;
             }
             canvas{
-                /*margin: -1000px -115px -10px 50px;*/
-                /*margin-top: -1000px;*/
-                margin-bottom: -500px;
-                margin-right: 100px;
-                /*width: 80%!important;*/
+                /*margin: -100px -100px -10px 50px;*/
 
+                position: absolute;
+                left: 20px;
+                top: -10px;
+
+
+            }
+            .greeting , .twitter {
+                position: absolute;
+                top: 950px;
+            }
+            .twitter{
+                right: 550px;
+                top: 1000px;
             }
 
             .values{
@@ -43,22 +52,22 @@
             }
             .left{
 
-                margin-top: -10px;
-                /*margin-right: -100px;*/
+                margin-top: 50px;
+                margin-right: -10px;
 
             }
             .right{
-                margin-top: -10px;
-                margin-right: -60px;
+                margin-top: 50px;
+                margin-right: -100px;
             }
             .top{
-                margin-top: -70px;
-                margin-right: -30px;
+                margin-top: -30px;
+                margin-right: -65px;
 
             }
             .bottom{
-                margin-top: 45px;
-                margin-right: -30px;
+                margin-top: 140px;
+                margin-right: -65px;
             }
 
 
