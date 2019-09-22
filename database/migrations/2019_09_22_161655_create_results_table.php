@@ -22,6 +22,7 @@ class CreateResultsTable extends Migration
             $table->integer('Btotal');
             $table->integer('Ctotal');
             $table->integer('Dtotal');
+
             $table->integer('AB');
             $table->integer('CD');
             $table->integer('AD');

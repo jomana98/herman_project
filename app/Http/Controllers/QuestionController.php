@@ -836,6 +836,10 @@ class QuestionController extends Controller
         $result->Btotal = $B;
         $result->Ctotal = $C;
         $result->Dtotal = $D;
+        $result->Arate = $APoint;
+        $result->Brate = $BPoint;
+        $result->Crate = $CPoint;
+        $result->Drate = $DPoint;
         $result->age = $request['age'][0];
         $result->AB = $A+$B;
         $result->CD = $C+$D;
