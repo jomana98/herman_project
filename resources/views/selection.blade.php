@@ -21,7 +21,7 @@
             margin-bottom: 50px;
         }
         .herman span{
-            color:#9c9c9c;
+            color:red;
         }
         input[type=submit]{
             border-radius: 15px;
@@ -45,7 +45,14 @@
             margin-top: 60px;
         }
 
-
+        .herman-danger{
+            width: 60%;
+            display: block;
+        }
+        .fa-arrow-circle-down{
+            color:#2c4861;
+            font-size: 24px;
+        }
     </style>
 @endsection
 
@@ -57,32 +64,49 @@
 
 @section('container')
 
-    <div class="container text-center" style="padding-top: 100px">
+    <div class="container text-center " style="padding-top: 100px">
 
-        <div class="herman">
-            <header><img src="{{asset('images/illustration.jpg')}}"></header>
-            <h4> مقياس هيرمان الكامل</h4>
-            <span>أنت بحاجة إلى : أكثر من 30 دقيقة</span><br>
-            <span>لابد من قراءة قائمة المصطلحات قبل البدء في المقياس</span>
-            <form method="get" action="{{route('home')}}">
-                <input type="hidden" value="{{$name}}" name="name">
-                <input type="submit" value="المقياس الكامل">
-            </form>
+
+        <div class="row">
+            <div class="herman">
+                <header><img src="{{asset('images/illustration.jpg')}}"></header>
+                <h4> مقياس هيرمان الكامل</h4>
+                <span>أنت بحاجة إلى : أكثر من 30 دقيقة</span><br>
+                <span>لابد من قراءة قائمة المصطلحات قبل البدء في المقياس</span>
+                <form method="get" action="{{route('home')}}">
+                    <input type="hidden" value="{{$name}}" name="name">
+                    <input type="submit" value="المقياس الكامل">
+                </form>
+
+            </div>
+
+
+
+
+            <div class="herman">
+                <header><img src="{{asset('images/illustration.jpg')}}"></header>
+                <h4> مقياس هيرمان المختصر</h4>
+                <span>أنت بحاجة إلى : أكثر من 15 دقيقة</span><br>
+                <span>قم باختيار نعم إذا توافرت فيك الصفة بنسبة 50% فأكثر</span>
+                <form method="get" action="{{route('shortQuestionView')}}">
+                    <input type="hidden" value="{{$name}}" name="name">
+                    <input type="submit" value="المقياس المختصر">
+                </form>
+
+            </div>
+            <div class="text-center"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div>
+
+        </div>
+        <div class="herman herman-danger">
+            <header class="alert-danger"></header>
+            <h4> تنبيهات عامة</h4>
+            <span>1- أول اختيار يرد إلى ذهنك بعد قراءة العبارة هو الذي يعبر عنك بالغالب </span><br>
+            <span style="display: block;"> 2- أجب عما هو موجود فيك الآن و ليس ما تسعى لتحقيقه</span>
+            <span> 3- ليس هناك نمط أفضل من نمط فلا تختار شئ ليس فيك </span>
+
 
         </div>
 
-
-        <div class="herman">
-            <header><img src="{{asset('images/illustration.jpg')}}"></header>
-            <h4> مقياس هيرمان المختصر</h4>
-            <span>أنت بحاجة إلى : أكثر من 15 دقيقة</span><br>
-            <span>قم باختيار نعم إذا توافرت فيك الصفة بنسبة 50% فأكثر</span>
-            <form method="get" action="{{route('shortQuestionView')}}">
-                <input type="hidden" value="{{$name}}" name="name">
-                <input type="submit" value="المقياس المختصر">
-            </form>
-
-         </div>
         </div>
 
 

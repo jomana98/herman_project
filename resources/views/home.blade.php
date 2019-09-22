@@ -94,6 +94,16 @@
         .tooltip.right .tooltip-arrow {
             border-right: 5px solid #2c4861;}
 
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+
+        }
+        input[type=number]{
+            color: #6c757d;
+        }
+
     </style>
 @endsection
 
@@ -183,7 +193,7 @@
 
                         <input type="radio" name="q3" style="opacity: 0" disabled='disabled' class="disable"><br>
                         @foreach($ans3 as $ans)
-                            <div class="radio1" style="margin-left:60px; margin-top:10px;">{{$x}} <input type="number" name="q3{{$ans->id}}" value="" max=3 min=1  class="text-center">{{$ans->choice}}</div>
+                            <div class="radio1" style="margin-left:60px; margin-top:10px;">{{$x}} <input type="number" min="1" max="3" name="q3{{$ans->id}}" value="" class="text-center">{{$ans->choice}}</div>
                             <?php $x++ ?>
                         @endforeach
                         <div class="errorTxt"></div>
@@ -210,7 +220,7 @@
 
                             <div class="radio1" style="margin-left:100px; margin-top:10px; background-color:#FEFEBE; padding:20px;">
                                 @foreach($ans as $subans)
-                                    <div style="margin-bottom:10px" >{{$x}}<input type="number" name="q4{{$x}}" value="" max=5 min=1 class="text-center" style="background-color:#FEFEBE" ><span id="t2" title="{{$subans->def}}" data-toggle="tooltip" data-placement="right">{{$subans->choice}}</span></div>
+                                    <div style="margin-bottom:10px" >{{$x}}<input type="number" min="1" max="5" name="q4{{$x}}" value="" class="text-center" style="background-color:#FEFEBE" ><span id="t2" title="{{$subans->def}}" data-toggle="tooltip" data-placement="right">{{$subans->choice}}</span></div>
 
                                     <?php $x++ ?>
                                 @endforeach
@@ -242,7 +252,7 @@
 
                             <div class="radio1" style="margin-left:100px; margin-top:10px;background-color:#FEFEBE; padding:20px;">
                                 @foreach($ans as $subans)
-                                    <div style="margin-bottom:10px">{{$x}}<input type="number" name="q5{{$x}}" value="" max=3 min=2 class="text-center" style="background-color:#FEFEBE;"><span id="t2" title="{{$subans->def}}" data-toggle="tooltip" data-placement="right">{{$subans->choice}}</span></div>
+                                    <div style="margin-bottom:10px">{{$x}}<input type="number" min="2" max="3" name="q5{{$x}}" value="" class="text-center" style="background-color:#FEFEBE;"><span id="t2" title="{{$subans->def}}" data-toggle="tooltip" data-placement="right">{{$subans->choice}}</span></div>
                                     <?php $x++ ?>
                                 @endforeach
                             </div>
@@ -572,21 +582,55 @@
             counter5-=1
         }
 
-        if(counter1>4 || counter2>4 || counter3>4 || counter4>4 || counter5>4){
+        {{--if(counter1>4 || counter2>4 || counter3>4 || counter4>4 || counter5>4){--}}
 
+            {{--$("input[type=submit]").attr('disabled','disabled');--}}
+
+            {{--$(".work").css('background-color' , "red");--}}
+            {{--$(".work").text("لا يمكن استخدام الرقم أكثر من 4 مرات");--}}
+        {{--}else{--}}
+
+             {{--$("input[type=submit]").removeAttr('disabled');--}}
+
+             {{--$(".work").css('background' , "none");--}}
+             {{--$(".work").text("");--}}
+        {{--}--}}
+
+        if(counter1>4){
+            $("input[type=submit]").attr('disabled','disabled');
+
+            $(".work").css('background-color' , "red");
+            $(".work").text("لا يمكن استخدام الرقم أكثر من 4 مرات");
+        }else if(counter2>4){
+            $("input[type=submit]").attr('disabled','disabled');
+
+            $(".work").css('background-color' , "red");
+            $(".work").text("لا يمكن استخدام الرقم أكثر من 4 مرات");
+        }else if(counter3>4){
+            $("input[type=submit]").attr('disabled','disabled');
+
+            $(".work").css('background-color' , "red");
+            $(".work").text("لا يمكن استخدام الرقم أكثر من 4 مرات");
+        }else if(counter3>4){
+            $("input[type=submit]").attr('disabled','disabled');
+
+            $(".work").css('background-color' , "red");
+            $(".work").text("لا يمكن استخدام الرقم أكثر من 4 مرات");
+        }else if(counter4>4){
+            $("input[type=submit]").attr('disabled','disabled');
+
+            $(".work").css('background-color' , "red");
+            $(".work").text("لا يمكن استخدام الرقم أكثر من 4 مرات");
+        }else if(counter5>4){
             $("input[type=submit]").attr('disabled','disabled');
 
             $(".work").css('background-color' , "red");
             $(".work").text("لا يمكن استخدام الرقم أكثر من 4 مرات");
         }else{
-
              $("input[type=submit]").removeAttr('disabled');
 
-
-
-
-             $(".work").css('background' , "none");
-             $(".work").text("");
+        $(".work").css('background' , "none");
+        $(".work").text("");
         }
 
 
@@ -645,7 +689,7 @@
             }
 
 
-           var inputs = [];
+
 
             var inputs = [];
 
@@ -846,7 +890,7 @@
           q12118: "required",
           q12119: "required",
           q12120: "required",
-          q410: "required",
+          q410: {type: "number",required:true},
           q411: "required",
           q412: "required",
           q413: "required",

@@ -16,9 +16,14 @@
                 display: none;
             }
             canvas{
-                margin: 0 -115px -10px 50px;
+                /*margin: -1000px -115px -10px 50px;*/
+                /*margin-top: -1000px;*/
+                margin-bottom: -500px;
+                margin-right: 100px;
+                /*width: 80%!important;*/
 
             }
+
             .values{
                 position: absolute;
                 right: 100px;
@@ -67,11 +72,12 @@
             font-weight: bold;
         }
         .result{
-            width: 70%;
+            width: 80%;
             margin: auto;
             padding: 10px 40px 20px;
             border-radius: 10px;
             background-color: #e9ecef40;
+            margin-top: 20px;
         }
         .result h1{
             margin-bottom: 25px;
@@ -80,6 +86,7 @@
             font-size: 16px;
             margin-bottom: 30px;
             font-weight: bold;
+
         }
         .result-content{
             width: 100%;
@@ -138,52 +145,52 @@
             background-color:#2c4861 ;
             padding: 10px 15px;
             border-radius: 5px;
-            color: black;
+            color: white;
             position: absolute;
         }
-        .left{
-            left: 30%;
-            top: 660px;
-        }
-        .right{
-            right: 30%;
-            top: 660px;
-        }
-        .top{
-            right: 48.5%;
-            top: 400px;
-        }
-        .bottom{
-            right: 48.5%;
-            top: 890px;
+        /*.left{*/
+            /*left: 30%;*/
+            /*top: 660px;*/
+        /*}*/
+        /*.right{*/
+            /*right: 30%;*/
+            /*top: 660px;*/
+        /*}*/
+        /*.top{*/
+            /*right: 45%;*/
+            /*top: 30px;*/
+        /*}*/
+        /*.bottom{*/
+            /*right: 48.5%;*/
+            /*top: 890px;*/
 
-        }
+        /*}*/
         .modal-header .close{
             margin-left: -40px!important;
         }
         .modal-footer{
             padding-top: 0;
         }
-        @media(max-width:1440px) {
+        @media(max-width:2000px) {
             button{
                 margin: 30px 44% 15px;
             }
             .top{
-                right: 48.5%;
-                top: 400px;
+                right: 46%;
+                top: 30px;
             }
             .bottom{
-                right: 48.5%;
-                top: 870px;
+                right: 46%;
+                top: 470px;
 
             }
             .left{
-                left: 28%;
-                top: 640px;
+                left: 14%;
+                top: 260px;
             }
             .right{
-                right: 28%;
-                top: 640px;
+                right: 15%;
+                top: 260px;
             }
 
         }
@@ -198,21 +205,21 @@
 
             }
             .top{
-                right: 48%;
-                top: 450px;
+                right: 46%;
+                top: 35px;
             }
             .bottom{
-                right: 48%;
-                top: 860px;
+                right: 46%;
+                top: 400px;
 
             }
             .left{
-                left: 28%;
-                top: 657px;
+                left: 14%;
+                top: 220px;
             }
             .right{
-                right: 28%;
-                top: 657px;
+                right: 15%;
+                top: 220px;
             }
 
         }
@@ -225,24 +232,31 @@
                 font-size: 12px;
             }
             .top{
-                right: 48%;
-                top: 460px;
+                right: 45%;
+                top: 50px;
             }
             .bottom{
-                right: 48%;
-                top: 770px;
+                right: 45%;
+                top: 320px;
 
             }
             .left{
-                left: 26%;
-                top: 615px;
+                left: 14%;
+                top: 185px;
             }
             .right{
-                right: 26%;
-                top: 615px;
+                right: 15%;
+                top: 185px;
             }
 
         }
+        .sum{
+            border: solid 2px gray;
+            border-radius:8px;
+            margin-top: 15px;
+            padding:4px;
+        }
+
 
     </style>
 @endsection
@@ -277,28 +291,47 @@
                 </div>
             </div>
             <div class="results">
-                <span class="values">رمز اللقطة</span><div class="text-center result-content">
-                    <span class="squares" style=" background-color: yellow">{{$DPoint}}</span>
-                    <span class="squares" style=" background-color: red;">{{$CPoint}}</span>
-                    <span class="squares" style=" background-color: green;">{{$BPoint}}</span>
-                    <span class="squares" style=" background-color: blue;">{{$APoint}}</span>
+                <span class="values space">رمز اللقطة</span><div class="text-center result-content">
+                    <span class="squares" id="Drate" style=" background-color: yellow">{{$DPoint}}</span>
+                    <span class="squares" id="Crate" style=" background-color: red;">{{$CPoint}}</span>
+                    <span class="squares" id="Brate" style=" background-color: green;">{{$BPoint}}</span>
+                    <span class="squares" id="Arate" style=" background-color: blue;">{{$APoint}}</span>
                 </div>
             </div>
+            @php
+                $total =   $A+$B+$D+$C;
+            @endphp
 
-                <span class="left">{{$A+$B}}</span>
-                <span class="right">{{$D+$C}}</span>
-                <span class="top">{{$D+$A}}</span>
-                <span class="bottom">{{$B+$C}}</span>
-                <canvas id="canvas" style="margin-top: 80px;margin-bottom: 80px;">
-                    Your browser does not support the canvas element.
+            <div class="row">
+                <div class="col-sm-2 ">
+                    <div class="results text-center" style="float: left;margin-top: 30px">
+                        <div class="sum">TOTAL(A+B+C+B)={{$total}}</div>
+                        <div class="sum" style="width:60%;float: left;">A+B={{$A+$B}}</div>
+                        <div class="sum" style="width:60%;clear: both;float: left;">C+D={{$C+$D}}</div>
+                        <div class="sum" style="width:60%;clear: both;float: left;">A+B={{$A+$B}}</div>
+                        <div class="sum" style="width:60%;clear: both;float: left;">C+B={{$C+$B}}</div>
 
-                </canvas>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <span class="left">{{round(($A+$B)/$total*100, 1)}} %</span>
+                    <span class="right">{{round(($D+$C)/$total*100, 1)}} %</span>
+                    <span class="top">{{round(($D+$A)/$total*100, 1)}} %</span>
+                    <span class="bottom">{{round(($B+$C)/$total*100, 1)}} %</span>
+                    <canvas id="canvas" style="margin-top: 80px;margin-bottom: 80px;width: 80%!important;">
+                        Your browser does not support the canvas element.
+
+                    </canvas>
+
+                </div>
+
+            </div>
 
 
-            {{--<canvas id="canvas2" style="position: relative;top: -450px;width: 100%">--}}
-                {{--Your browser does not support the canvas element.--}}
 
-            {{--</canvas>--}}
+
+
+
 
 
             <button type="submit" name="print" value="print" onclick="window.print()">طباعة النتيجة</button>
@@ -325,6 +358,7 @@
 @endsection
 @section('script')
     <script>
+
         var Dtotal = $("#Dtotal").text();
         var Ctotal = $("#Ctotal").text();
         var Btotal = $("#Btotal").text();
