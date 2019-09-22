@@ -44,29 +44,32 @@
             <tr>
                 <th>إسم المتدرب</th>
                 <th>تاريخ الإختبار</th>
+                <th>العمر</th>
                 <th>مجموع A</th>
                 <th>مجموع B</th>
                 <th>مجموع C</th>
                 <th>مجموع D</th>
-                <th>رمز A</th>
-                <th>رمز B</th>
-                <th>رمز C</th>
-                <th>رمز D</th>
+                <th>A+B</th>
+                <th>C+D</th>
+                <th>A+D</th>
+                <th>C+B</th>
             </tr>
             </thead>
             <tbody>
             @foreach($shortResults as $result)
+
                 <tr>
                     <td>{{$result->userName}}</td>
                     <td>{{$result->examDate}}</td>
+                    <td>{{$result->age}}</td>
                     <td>{{$result->Atotal}}</td>
                     <td>{{$result->Btotal}}</td>
                     <td>{{$result->Ctotal}}</td>
                     <td>{{$result->Dtotal}}</td>
-                    <td>{{$result->Arate}}</td>
-                    <td>{{$result->Brate}}</td>
-                    <td>{{$result->Crate}}</td>
-                    <td>{{$result->Drate}}</td>
+                    <td>{{$result->AB}}</td>
+                    <td>{{$result->CD}}</td>
+                    <td>{{$result->AD}}</td>
+                    <td>{{$result->CB}}</td>
                 </tr>
             @endforeach
 

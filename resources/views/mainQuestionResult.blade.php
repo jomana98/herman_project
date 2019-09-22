@@ -36,14 +36,15 @@
     </head>
 <div class="container">
     @php
-        use App\Result;
-       $shortResults = Result::where('resultType' , 'main')->get();
+        use App\MainResult;
+       $shortResults = MainResult::where('resultType' , 'main')->get();
     @endphp
     <table id="example" class="display table table-striped text-center" style="width:100%">
         <thead>
         <tr>
             <th>إسم المتدرب</th>
             <th>تاريخ الإختبار</th>
+            <th>العمر</th>
             <th>مجموع A</th>
             <th>مجموع B</th>
             <th>مجموع C</th>
@@ -59,6 +60,7 @@
             <tr>
                 <td>{{$result->userName}}</td>
                 <td>{{$result->examDate}}</td>
+                <td>{{$result->age}}</td>
                 <td>{{$result->Atotal}}</td>
                 <td>{{$result->Btotal}}</td>
                 <td>{{$result->Ctotal}}</td>

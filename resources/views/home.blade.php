@@ -123,14 +123,22 @@
                 <div class="panel-heading">معلومات شخصية</div>
                 <div class="panel-body">
                     <div id="info" style="background-color:#FEFEBE;padding:5px;border:solid 1px gray;">
-                        1-الإسم :<input type="text" name="userName"style="padding-right: 15px;width:40%; background-color:#FEFEBE;border-bottom:none;">
+                        1-الإسم :<input type="text" name="userName"style="padding-right: 15px;width:20%; background-color:#FEFEBE;border-bottom:none;">
+                         -العمر :
+                        <select class="browser-default custom-select" required style="padding-right: 15px;width:20%; background-color:#FEFEBE;border-bottom:none;" name="age[]">
+                            <option selected></option>
+                            <option value="15-25">15-25</option>
+                            <option value="26-36">26-36</option>
+                            <option value="37-47">37-47</option>
+                            <option value="47 فأكث"> 47 فأكثر</option>
+                        </select>
                         <span style="margin-right:100px;background-color:#FEFEBE">
-      2-الجنس :
-      &nbsp;&nbsp;
-      <input type="radio" name="gender" value="male" >&nbsp;&nbsp;&nbsp;ذكر
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="radio" name="gender" value="female">&nbsp;&nbsp;&nbsp;أنثى
-    </span>
+                          2-الجنس :
+                          &nbsp;&nbsp;
+                          <input type="radio" name="gender" value="male" >&nbsp;&nbsp;&nbsp;ذكر
+                          &nbsp;&nbsp;&nbsp;&nbsp;
+                          <input type="radio" name="gender" value="female">&nbsp;&nbsp;&nbsp;أنثى
+                        </span>
                     </div>
                     <br>
                     <div id="subject" style="background-color:#FEFEBE;border:solid 1px gray; padding:5px;">
@@ -486,6 +494,13 @@
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
+        function parseArabic(str) {
+            return Number( str.replace(/[٠١٢٣٤٥٦٧٨٩]/g, function(d) {
+                return d.charCodeAt(0) - 1632; // Convert Arabic numbers
+            }).replace(/[۰۱۲۳۴۵۶۷۸۹]/g, function(d) {
+                return d.charCodeAt(0) - 1776; // Convert Persian numbers
+            }) );
+        }
     var counter_1 =0;
     var counter_2 =0;
     var counter_3 =0;
@@ -496,6 +511,9 @@
 
             var prev = $(this).data('val');
             var current = $(this).val();
+            parseArabic(prev);
+            parseArabic(current);
+
 
                if(current){
                     if(current == 1){
@@ -551,6 +569,8 @@
 
         var prev = $(this).data('val');
         var current = $(this).val();
+        parseArabic(prev);
+        parseArabic(current);
 
            if(current){
                 if(current == 1){
@@ -634,7 +654,7 @@
         }
 
 
-        console.log(counter1);
+
     });
 
 {{--نهاية فحص طبيعة العمل--}}
@@ -651,6 +671,8 @@
         }).on('change','input', function(){
             var prev = $(this).data('val');
             var current = $(this).val();
+            parseArabic(prev);
+            parseArabic(current);
 
                if(current){
                     if(current == 3){
@@ -740,6 +762,8 @@
 
            var prev = $(this).data('val');
            var current = $(this).val();
+           parseArabic(prev);
+           parseArabic(current);
 
               if(current){
                    if(current == 3){
@@ -840,6 +864,8 @@
   function validateForm(){
   var validator = $("#form").validate({
     rules:{
+
+          age: "required",
           q1: "required",
           q2: "required",
           q7: "required",

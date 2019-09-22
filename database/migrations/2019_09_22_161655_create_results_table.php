@@ -16,15 +16,17 @@ class CreateResultsTable extends Migration
         Schema::create('results', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('userName');
+            $table->string('age');
             $table->date('examDate');
             $table->integer('Atotal');
             $table->integer('Btotal');
             $table->integer('Ctotal');
             $table->integer('Dtotal');
-            $table->integer('Arate');
-            $table->integer('Brate');
-            $table->integer('Crate');
-            $table->integer('Drate');
+            $table->integer('AB');
+            $table->integer('CD');
+            $table->integer('AD');
+            $table->integer('CB');
+            $table->string('resultType');
             $table->timestamps();
         });
     }
