@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Result;
+use App\MainResult;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\ShortQuestion;
@@ -706,19 +707,20 @@ class QuestionController extends Controller
         }
 
         //--------------------------------------------------------------------------------
-        $result = new Result();
-        $result->userName=$request['name'];
-        $result->examDate=date('Y/m/d');
-        $result->Atotal = $Atotal;
-        $result->Btotal = $Btotal;
-        $result->Ctotal = $Ctotal;
-        $result->Dtotal = $Dtotal;
-        $result->Arate = $Arate;
-        $result->Brate = $Brate;
-        $result->Crate = $Crate;
-        $result->Drate = $Drate;
-        $result->resultType = "main";
-        $result->save();
+        $results = new MainResult();
+        $results->userName=$request['name'];
+        $results->examDate=date('Y/m/d');
+        $results->age=$request['age'][0];
+        $results->Atotal = $Atotal;
+        $results->Btotal = $Btotal;
+        $results->Ctotal = $Ctotal;
+        $results->Dtotal = $Dtotal;
+        $results->Arate = $Arate;
+        $results->Brate = $Brate;
+        $results->Crate = $Crate;
+        $results->Drate = $Drate;
+        $results->resultType = "main";
+        $results->save();
         //................................................................................
         return view('result', ['name' => $request['name'],
             'Atotal' => $Atotal,
@@ -834,10 +836,11 @@ class QuestionController extends Controller
         $result->Btotal = $B;
         $result->Ctotal = $C;
         $result->Dtotal = $D;
-        $result->Arate = $APoint;
-        $result->Brate = $BPoint;
-        $result->Crate = $CPoint;
-        $result->Drate = $DPoint;
+        $result->age = $request['age'][0];
+        $result->AB = $A+$B;
+        $result->CD = $C+$D;
+        $result->AD = $A+$D;
+        $result->CB = $C+$B;
         $result->resultType= 'short';
         $result->save();
 

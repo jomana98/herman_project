@@ -64,7 +64,7 @@
                 @csrf
                 <div class="form-group">
                     <label for="userName">اسم المستخدم</label>
-                    <input type="text" name="user-name" id="userName" placeholder="أدخل اسم المستخدم">
+                    <input type="text" name="user-name" id="userName" placeholder=" أدخل اسم المستخدم ثلاثي">
                 </div>
                 <div class="form-group">
                     <label for="password">الرمز السري</label>

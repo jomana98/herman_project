@@ -68,6 +68,25 @@
         <form method="post" action="{{route('shortResult')}}" id="form">
             @csrf
             <input type="hidden" name="name" value="{{$name}}">
+
+            <div class="panel panel-default"  style="width:80%; margin: auto">
+                <div class="panel-heading" style="font-weight: bolder">معلومات شخصية</div>
+
+                <div class="panel-body">
+                    أدخل عمرك من فضلك :
+
+                    <select class="browser-default custom-select" required style="padding-right: 15px;width:20%;border-bottom:none;" name="age[]">
+                        <option selected></option>
+                        <option value="15-25">15-25</option>
+                        <option value="26-36">26-36</option>
+                        <option value="37-47">37-47</option>
+                        <option value=" 47 فأكثر"> 47 فأكثر</option>
+                    </select>
+
+                    <br>
+                </div>
+            </div>
+
         <div class="panel panel-default"  style="width:80%; margin: auto">
             <div class="panel-heading" style="font-weight: bolder">نموذج هيرمان المختصر</div>
 
@@ -128,6 +147,7 @@
   function validateForm(){
   var validator = $("#form").validate({
     rules:{
+          age:"required",
           short1: "required",
           short2: "required",
           short3: "required",
@@ -184,6 +204,7 @@
           short54: "required",
           short55: "required",
           short56: "required",
+
 
 
     }
