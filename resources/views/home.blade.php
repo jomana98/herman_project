@@ -494,6 +494,13 @@
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
+        function parseArabic(str) {
+            return Number( str.replace(/[٠١٢٣٤٥٦٧٨٩]/g, function(d) {
+                return d.charCodeAt(0) - 1632; // Convert Arabic numbers
+            }).replace(/[۰۱۲۳۴۵۶۷۸۹]/g, function(d) {
+                return d.charCodeAt(0) - 1776; // Convert Persian numbers
+            }) );
+        }
     var counter_1 =0;
     var counter_2 =0;
     var counter_3 =0;
@@ -504,6 +511,9 @@
 
             var prev = $(this).data('val');
             var current = $(this).val();
+            parseArabic(prev);
+            parseArabic(current);
+
 
                if(current){
                     if(current == 1){
@@ -559,6 +569,8 @@
 
         var prev = $(this).data('val');
         var current = $(this).val();
+        parseArabic(prev);
+        parseArabic(current);
 
            if(current){
                 if(current == 1){
@@ -642,7 +654,7 @@
         }
 
 
-        console.log(counter1);
+
     });
 
 {{--نهاية فحص طبيعة العمل--}}
@@ -659,6 +671,8 @@
         }).on('change','input', function(){
             var prev = $(this).data('val');
             var current = $(this).val();
+            parseArabic(prev);
+            parseArabic(current);
 
                if(current){
                     if(current == 3){
@@ -748,6 +762,8 @@
 
            var prev = $(this).data('val');
            var current = $(this).val();
+           parseArabic(prev);
+           parseArabic(current);
 
               if(current){
                    if(current == 3){

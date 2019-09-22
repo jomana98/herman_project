@@ -53,6 +53,7 @@
         }
 
 
+
     </style>
 @endsection
 
@@ -75,7 +76,7 @@
                 <div class="panel-body">
                     أدخل عمرك من فضلك :
 
-                    <select class="browser-default custom-select" required style="padding-right: 15px;width:20%;border-bottom:none;" name="age[]">
+                    <select class="browser-default custom-select" required style="padding-right:15px; width:20%; border-bottom:none!important;" name="age[]">
                         <option selected></option>
                         <option value="15-25">15-25</option>
                         <option value="26-36">26-36</option>
