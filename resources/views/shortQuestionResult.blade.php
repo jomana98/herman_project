@@ -38,6 +38,7 @@
         @php
          use App\Result;
         $shortResults = Result::where('resultType' , 'short')->get();
+
         @endphp
         <table id="example" class="display table table-striped text-center" style="width:100%">
             <thead>
@@ -45,31 +46,36 @@
                 <th>إسم المتدرب</th>
                 <th>تاريخ الإختبار</th>
                 <th>العمر</th>
-                <th>مجموع A</th>
-                <th>مجموع B</th>
-                <th>مجموع C</th>
-                <th>مجموع D</th>
-                <th>A+B</th>
-                <th>C+D</th>
-                <th>A+D</th>
-                <th>C+B</th>
+                <th>رمز A</th>
+                <th>رمز B</th>
+                <th>رمز C</th>
+                <th>رمز D</th>
+                <th>الفص الأيمن</th>
+                <th>الفص الأيسر</th>
+
             </tr>
             </thead>
             <tbody>
-            @foreach($shortResults as $result)
 
+            @foreach($shortResults as $result)
+                @php
+                $A = $result->Atotal;
+                $B = $result->Btotal;
+                $C = $result->Ctotal;
+                $D = $result->Dtotal;
+                $total =   $A+$B+$D+$C;
+                @endphp
                 <tr>
                     <td>{{$result->userName}}</td>
                     <td>{{$result->examDate}}</td>
                     <td>{{$result->age}}</td>
-                    <td>{{$result->Atotal}}</td>
-                    <td>{{$result->Btotal}}</td>
-                    <td>{{$result->Ctotal}}</td>
-                    <td>{{$result->Dtotal}}</td>
-                    <td>{{$result->AB}}</td>
-                    <td>{{$result->CD}}</td>
-                    <td>{{$result->AD}}</td>
-                    <td>{{$result->CB}}</td>
+                    <td>{{$result->Arate}}</td>
+                    <td>{{$result->Brate}}</td>
+                    <td>{{$result->Crate}}</td>
+                    <td>{{$result->Drate}}</td>
+                    <td>{{round(($result->CD)/$total*100, 1)}} %</td>
+                    <td>{{round(($result->AB)/$total*100, 1)}} %</td>
+
                 </tr>
             @endforeach
 

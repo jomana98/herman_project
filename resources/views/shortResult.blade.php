@@ -19,8 +19,8 @@
                 /*margin: -100px -100px -10px 50px;*/
 
                 position: absolute;
-                left: 20px;
-                top: -10px;
+                left: 2px;
+                top: 15px;
 
 
             }
@@ -52,22 +52,22 @@
             }
             .left{
 
-                margin-top: 50px;
-                margin-right: -10px;
+                margin-top: 80px;
+                margin-right: 10px;
 
             }
             .right{
-                margin-top: 50px;
+                margin-top: 80px;
                 margin-right: -100px;
             }
             .top{
-                margin-top: -30px;
-                margin-right: -65px;
+                margin-top: -5px;
+                margin-right: -50px;
 
             }
             .bottom{
-                margin-top: 140px;
-                margin-right: -65px;
+                margin-top: 180px;
+                margin-right: -50px;
             }
 
 
