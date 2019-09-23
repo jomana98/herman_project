@@ -31,5 +31,7 @@ Route::post('/shortResult',"QuestionController@shortQuestionResult")->name('shor
 Route::post('/printResult','QuestionController@print');
 Route::post('/UpdateSecretNumber',"adminController@update")->name('UpdateSecretNumber');
 Route::post('/updatePassworde',"adminController@updatePassworde")->name('updatePassworde');
+Route::post('/export',"ExcelController@export")->name('export');
+Route::post('/exportMain',"ExcelController@exportMain")->name('exportMain');
 
 Route::get('/SelectionpPage',"QuestionController@SelectionpPage" )->name('SelectionpPage');
