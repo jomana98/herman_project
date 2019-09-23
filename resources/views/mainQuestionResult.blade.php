@@ -18,6 +18,16 @@
         .dataTables_info{
             visibility: hidden;
         }
+        input[type=submit]{
+            border-radius: 15px;
+            padding: 7px;
+            width: 100px;
+            margin: 20px 46% 15px;
+            background-color: #2c4861;
+            color: white;
+            border: 1px;
+
+        }
     </style>
 
 @endsection
@@ -75,7 +85,10 @@
         </tbody>
     </table>
 
-
+    <form method="post" action="{{route('exportMain')}}" enctype="multipart/form-data">
+        @csrf
+        <input name="send" type="submit" value="تصدير اكسل" id="submitButton">
+    </form>
 
 
 </div>
