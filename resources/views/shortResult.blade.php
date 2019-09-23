@@ -19,7 +19,7 @@
                 /*margin: -100px -100px -10px 50px;*/
 
                 position: absolute;
-                left: 2px;
+                left: -40px;
                 top: 15px;
 
 
@@ -58,18 +58,20 @@
             }
             .right{
                 margin-top: 80px;
-                margin-right: -100px;
+                margin-right: -30px;
             }
             .top{
                 margin-top: -5px;
-                margin-right: -50px;
+                margin-right: -10px;
 
             }
             .bottom{
                 margin-top: 180px;
-                margin-right: -50px;
+                margin-right: -10px;
             }
-
+            .results{
+                margin-left: -70px;
+            }
 
 
         }

@@ -70,8 +70,8 @@
             @csrf
             <input type="hidden" name="name" value="{{$name}}">
 
-            <div class="panel panel-default"  style="width:80%; margin: auto">
-                <div class="panel-heading" style="font-weight: bolder">معلومات شخصية</div>
+            <div class="panel panel-default text-center"  style="width:80%; margin: auto;margin-bottom: 20px">
+                <div class="panel-heading" style="font-weight: bolder;background-color: #a92b2b;color: white;">معلومات شخصية</div>
 
                 <div class="panel-body">
                     أدخل عمرك من فضلك :

@@ -27,7 +27,7 @@
         }
         .radio1{
             display: inline-block;
-            margin-left:80px;
+            margin-left:60px!important;
         }
 
         .font-size{
@@ -52,7 +52,7 @@
 
         .error{
             color: #ff0000!important;
-            font-size: 14px;
+            font-size:12px;
             padding: 5px;
             /*border-radius: 10px;*/
             /*width: 15%;*/
@@ -226,7 +226,7 @@
                             <span class="work"></span><br>
                         @foreach($ans4 as $ans)
 
-                            <div class="radio1" style="margin-left:100px; margin-top:10px; background-color:#FEFEBE; padding:20px;">
+                            <div class="radio1" style="margin-left:50px!important; margin-top:10px; background-color:#FEFEBE; padding:20px;">
                                 @foreach($ans as $subans)
                                     <div style="margin-bottom:10px" >{{$x}}<input type="number" min="1" max="5" name="q4{{$x}}" value="" class="text-center" style="background-color:#FEFEBE" ><span id="t2" title="{{$subans->def}}" data-toggle="tooltip" data-placement="right">{{$subans->choice}}</span></div>
 
@@ -290,7 +290,7 @@
 
                             {{--<div class="radio1" style="margin-left:110px; margin-top:10px;">--}}
 
-                            <div class="radio1" style="margin-left:80px; margin-top:10px; background-color:#FEFEBE; padding:15px;">
+                            <div class="radio1" style="margin-left:35px!important; margin-top:10px; background-color:#FEFEBE; padding:15px;">
 
                                 @foreach($ans as $subans)
                                     <div style="margin-bottom:10px">{{$x}}<input type="number" name="q6{{$x}}" value="" max=3 min=1 class="text-center" style="background-color:#FEFEBE;">{{$subans->choice}}</div>
@@ -493,6 +493,13 @@
 
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
+            $("input[type=number]").on("focus", function() {
+                $(this).on("keydown", function(event) {
+                    if (event.keyCode === 38 || event.keyCode === 40) {
+                        event.preventDefault();
+                    }
+             });
+   });
         });
         function parseArabic(str) {
             return Number( str.replace(/[٠١٢٣٤٥٦٧٨٩]/g, function(d) {
@@ -649,8 +656,8 @@
         }else{
              $("input[type=submit]").removeAttr('disabled');
 
-        $(".work").css('background' , "none");
-        $(".work").text("");
+            $(".work").css('background' , "none");
+            $(".work").text("");
         }
 
 
@@ -916,7 +923,7 @@
           q12118: "required",
           q12119: "required",
           q12120: "required",
-          q410: {type: "number",required:true},
+          q410: "required",
           q411: "required",
           q412: "required",
           q413: "required",
