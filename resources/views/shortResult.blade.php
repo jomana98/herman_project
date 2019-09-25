@@ -19,7 +19,7 @@
                 /*margin: -100px -100px -10px 50px;*/
 
                 position: absolute;
-                left: -40px;
+                left: -58px;
                 top: 15px;
 
 
@@ -58,16 +58,17 @@
             }
             .right{
                 margin-top: 80px;
-                margin-right: -30px;
+                margin-right:10px;
             }
             .top{
                 margin-top: -5px;
                 margin-right: -10px;
-
+                display: none;
             }
             .bottom{
                 margin-top: 180px;
                 margin-right: -10px;
+                display: none;
             }
             .results{
                 margin-left: -70px;
@@ -261,11 +262,105 @@
             }
 
         }
+
         .sum{
             border: solid 2px gray;
             border-radius:8px;
             margin-top: 15px;
             padding:4px;
+        }
+
+        @media(max-width: 450px){
+            .greeting{
+                display: none!important;
+
+            }
+            .twitter {
+                margin-top: 30px;
+                float: none;
+            }
+            button{
+                margin: 30px 30% 15px;
+            }
+            /*.result-content span{*/
+                /*display: block;*/
+            /*}*/
+            .values{
+                margin-right: 0;
+                display: block;
+            }
+            .result-content {
+                margin-top: 30px;
+
+            }
+            .result-content span{
+                margin-left: 0px;
+
+            }
+            .squares{
+                width: auto;
+                height: auto;
+                padding: 5px 10px;
+            }
+            .letters {
+                margin-left: 10px!important;
+            }
+            .sum{
+                float:none!important; ;
+                clear: none!important;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+            .sums{
+                float: none!important;
+            }
+            .top , .bottom{
+                display: none;
+            }
+            .left{
+                margin-left: -30px!important;
+                margin-top: -100px;
+            }
+            .right{
+                margin-right: -30px!important;
+                margin-top: -100px;
+            }
+            #canvas{
+                margin: auto;
+                margin-top: 20px!important;
+                margin-left: 265px!important;
+                margin-bottom: 30px!important;
+                width: 300px!important;
+                height: 155px!important;
+            }
+        }
+        @media (max-width: 375px) {
+            .squares{
+                margin-left: 2px!important;
+                margin-right: 2px!important;
+            }
+            .letters{
+                margin-left: 1px!important;
+
+            }
+            #canvas{
+                margin-left: 235px!important;
+            }
+            button{
+                margin: 30px 25% 15px;
+            }
+
+        }
+        @media (max-width: 320px) {
+            .result{
+                background: none;
+                width: 100%!important;
+                padding: 0;
+            }
+            #canvas {
+                margin-left: 250px!important;
+            }
+
         }
 
 
@@ -287,10 +382,10 @@
             <h1 class="text-center" style="margin-bottom:60px;">النتيجة</h1>
             <div class="results">
                 <span class="values">الربع</span><div class="text-center result-content">
-                    <span>A</span>
-                    <span>B</span>
-                    <span>C</span>
-                    <span>D</span>
+                    <span class="letters">A</span>
+                    <span class="letters">B</span>
+                    <span class="letters">C</span>
+                    <span class="letters">D</span>
                 </div>
             </div>
             <div class="results">
@@ -314,8 +409,8 @@
             @endphp
 
             <div class="row">
-                <div class="col-sm-2 ">
-                    <div class="results text-center" style="float: left;margin-top: 30px">
+                <div class="col-sm-2 col-xs-12">
+                    <div class="results text-center sums" style="float: left;margin-top: 30px">
                         <div class="sum">TOTAL(A+B+C+B)={{$total}}</div>
                         <div class="sum" style="width:60%;float: left;">A+B={{$A+$B}}</div>
                         <div class="sum" style="width:60%;clear: both;float: left;">C+D={{$C+$D}}</div>
@@ -324,7 +419,7 @@
 
                     </div>
                 </div>
-                <div class="col-sm-10">
+                <div class="col-sm-10 col-xs-12">
                     <span class="left">{{round(($A+$B)/$total*100, 1)}} %</span>
                     <span class="right">{{round(($D+$C)/$total*100, 1)}} %</span>
                     <span class="top">{{round(($D+$A)/$total*100, 1)}} %</span>

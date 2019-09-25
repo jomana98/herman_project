@@ -130,6 +130,61 @@
             }
 
         }
+        @media(max-width: 450px){
+            .greeting{
+                display: none!important;
+
+            }
+            .twitter {
+                margin-top: 30px;
+                float: none;
+            }
+            button{
+                margin: 30px 35% 15px;
+            }
+            .result{
+                padding: 0;
+                background: no-repeat;
+            }
+            .values{
+                margin-right: 0;
+                display: block;
+            }
+            .result-content {
+                margin-top: 30px;
+
+            }
+            .result-content span{
+                margin-left: 0px;
+
+            }
+            .squares{
+                width: auto;
+                height: auto;
+                padding: 5px 10px;
+            }
+            #canvas{
+                margin: auto;
+                margin-top: 20px!important;
+                margin-left: 275px!important;
+                margin-bottom: 30px!important;
+                width: 300px!important;
+                height: 155px!important;
+            }
+            .letters{
+                margin-left: 20px!important;
+            }
+        }
+        @media (max-width: 320px) {
+
+            #canvas {
+                margin-left: 250px!important;
+            }
+            button{
+                margin: 30px 25% 15px;
+            }
+
+        }
 
     </style>
 @endsection
@@ -149,10 +204,10 @@
             <h1 class="text-center" style="margin-bottom:60px;">النتيجة</h1>
             <div class="results">
                 <span class="values">الربع</span><div class="text-center result-content">
-                    <span>A</span>
-                    <span>B</span>
-                    <span>C</span>
-                    <span>D</span>
+                    <span class="letters">A</span>
+                    <span class="letters">B</span>
+                    <span class="letters">C</span>
+                    <span class="letters">D</span>
                 </div>
             </div>
             <div class="results">
